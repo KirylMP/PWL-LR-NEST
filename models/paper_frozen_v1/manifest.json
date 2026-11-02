@@ -1,0 +1,60 @@
+{
+  "description": "Six frozen two-threshold models for paper; hashes identify exact files, no modification protection.",
+  "code_commit": "4d19bca1577b04aeba3a0b0f4a36202d64cf58d2",
+  "models": {
+    "afm_mixed": {
+      "source": "/media/disk1/kizemin/Users/lab_b/Documents/mikholap/PWL-NEST-fixed-events/astrocyte_lab/paper_models/afm_mixed",
+      "K_ER": 0.075,
+      "sha256": {
+        "parameters.json": "2c524fb21af13f58cc6babbd3e7adec3287412a2af5ca52cf60f2e7833d3bf14",
+        "validation.json": "87a24ba5c8fa4165e986125519d7c1b716cc6b1d74b29a103ecc8832d831d352",
+        "comparison.png": "f33a7d9fd6eaacba2efa6dd0fe1348654e0432d0d6f365c3bb543f53894b3e62"
+      }
+    },
+    "afm_physical": {
+      "source": "/media/disk1/kizemin/Users/lab_b/Documents/mikholap/PWL-NEST-fixed-events/astrocyte_lab/paper_models/afm_physical",
+      "K_ER": 0.075,
+      "sha256": {
+        "parameters.json": "b350589a04f229f74e684b714704ff004de67d086825380b9381a0aaf3f3a655",
+        "validation.json": "7bb5a052b63eb2485ca8fffbb5b544cb21bbfef2dfd7ffc2d5874c551ab835ea",
+        "comparison.png": "d0098715fb0e7e8cb234b40204a4d6917b67a88df7f4acc2913890842eefd334"
+      }
+    },
+    "am_mixed": {
+      "source": "/media/disk1/kizemin/Users/lab_b/Documents/mikholap/PWL-NEST-fixed-events/astrocyte_lab/paper_models/am_mixed",
+      "K_ER": 0.1,
+      "sha256": {
+        "parameters.json": "dcb83ea77b845afff5dfc74750e1000325c43a409c42975778d539d7913605ba",
+        "validation.json": "9a5ff5459b2501f2c5cc71eef55c01ad2666259467f6695cd4bc91c33f30e830",
+        "comparison.png": "3688c69f6ddf66423f1d45b283639d82cf5b2ca37b29877f290b8be9d814e036"
+      }
+    },
+    "am_physical": {
+      "source": "/media/disk1/kizemin/Users/lab_b/Documents/mikholap/PWL-NEST-fixed-events/astrocyte_lab/paper_models/am_physical",
+      "K_ER": 0.1,
+      "sha256": {
+        "parameters.json": "719cbc9874bb19988961a4d9a024f517de225cd8d0aa19c46c634023496aa1ce",
+        "validation.json": "c3a8ee0591e23f09dc1f522395fc1caf4e7c862a6962a713e1bc469a86bb6159",
+        "comparison.png": "664b3b7ae591235fc457dc7e9c4a2e687e490ef48e81419ec669d0a8d26f4185"
+      }
+    },
+    "fm_mixed": {
+      "source": "/media/disk1/kizemin/Users/lab_b/Documents/mikholap/PWL-NEST-fixed-events/astrocyte_lab/runs/fm2_peak_20261029T175253Z_4BaiP8/comparison/rank_01",
+      "K_ER": 0.05,
+      "sha256": {
+        "parameters.json": "2fcf2376464b8ff5268ebc930b0abc4d797066e34c79fb7e5c49d1ddc39fdbb2",
+        "validation.json": "ded0866eab82b2e0a9f562a1b61574bf6ab68a6c31a2352fec6ce0b7ded1a319",
+        "comparison.png": "1b17a208db6699e93fe14099f33a5ee0dde531c57565eb3b4e00dd5ecae697b6"
+      }
+    },
+    "fm_physical": {
+      "source": "/media/disk1/kizemin/Users/lab_b/Documents/mikholap/PWL-NEST-fixed-events/astrocyte_lab/paper_models/fm_physical",
+      "K_ER": 0.05,
+      "sha256": {
+        "parameters.json": "5f9cccbee15e5c6fca5379d4c19a883dad982d18885810ab53785aedca2ea728",
+        "validation.json": "9e88ddcf650f0d5c4450bd02869243de81a13826011939a4083c3d8c7287255b",
+        "comparison.png": "47aa0a470e2257aa7e316512537519ce4bd553b9fe81f2bbd3515ffb74c9a711"
+      }
+    }
+  }
+}
