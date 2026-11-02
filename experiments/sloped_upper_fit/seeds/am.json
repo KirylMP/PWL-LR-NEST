@@ -1,0 +1,349 @@
+{
+  "case": "AM",
+  "K": 0.1,
+  "source_commit": "416f56d8959990a1eeaef1a35ae6526f9b1ebeef",
+  "geometry": {
+    "C0": 0.21697870932621072,
+    "I1": 0.5045338186565765,
+    "I2": 1.0045338186565724,
+    "height": 0.01500000000000372
+  },
+  "basis": "[1,C,h,I,max(C-C0,0),max(C-upper(I),0)]",
+  "coefficient_rows": [
+    [
+      -1.9498070906201106,
+      0.11210726120098488
+    ],
+    [
+      0.34929223756971783,
+      -0.1412558261762899
+    ],
+    [
+      2.2085255012208513,
+      -0.13498948122286053
+    ],
+    [
+      0.8962014420280319,
+      0.01915642359954186
+    ],
+    [
+      -16.22355027423353,
+      0.558346592405965
+    ],
+    [
+      15.981816160718722,
+      -0.5419799911912855
+    ]
+  ],
+  "optimizer": {
+    "nfev": 14,
+    "success": true,
+    "message": "`gtol` termination condition is satisfied.",
+    "weighted_field_objective": 0.03485496864304792,
+    "geometry_bounds": [
+      [
+        0.05449132108289181,
+        0.2045338186565767,
+        0.025,
+        0.015
+      ],
+      [
+        0.38922372202065575,
+        0.5045338186565766,
+        0.5,
+        1.2
+      ]
+    ]
+  },
+  "matrices": [
+    {
+      "matrix": [
+        [
+          0.3492922375780694,
+          2.2085255011461413
+        ],
+        [
+          -0.14125582618179644,
+          -0.13498948122497856
+        ]
+      ],
+      "eigenvalues": [
+        [
+          0.10715137817654546,
+          0.5033238505338841
+        ],
+        [
+          0.10715137817654546,
+          -0.5033238505338841
+        ]
+      ]
+    },
+    {
+      "matrix": [
+        [
+          -15.874258036674416,
+          2.2085255011461413
+        ],
+        [
+          0.417090766232156,
+          -0.13498948122497856
+        ]
+      ],
+      "eigenvalues": [
+        [
+          -15.93256796023266,
+          0.0
+        ],
+        [
+          -0.07667955766673443,
+          0.0
+        ]
+      ]
+    },
+    {
+      "matrix": [
+        [
+          0.1075581240669865,
+          2.2085255011461413
+        ],
+        [
+          -0.12488922496861621,
+          -0.13498948122497856
+        ]
+      ],
+      "eigenvalues": [
+        [
+          -0.013715678578995999,
+          0.5109928599827492
+        ],
+        [
+          -0.013715678578995999,
+          -0.5109928599827492
+        ]
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "I": 0.3771216584756781,
+      "split": "train",
+      "target": {
+        "period": 12.994197650755268,
+        "Cmin": 0.1117485997073787,
+        "Cmax": 0.25640279809079874
+      },
+      "new": {
+        "status": "integration_failed_or_left_domain"
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 16.02000000000004,
+        "Cmin": 0.0669695835098215,
+        "Cmax": 0.3538284252617065,
+        "peak_difference": 3.9165647588990105e-06,
+        "period_relative_difference": 0.0028089887640494787
+      }
+    },
+    {
+      "I": 0.40101959300428724,
+      "split": "holdout",
+      "target": {
+        "period": 12.75155501570407,
+        "Cmin": 0.1048811710491062,
+        "Cmax": 0.315123933289557
+      },
+      "new": {
+        "status": "integration_failed_or_left_domain"
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 14.310000000000002,
+        "Cmin": 0.06618289386831054,
+        "Cmax": 0.3928079891489511,
+        "peak_difference": 5.94167854511829e-06,
+        "period_relative_difference": 3.972286433319917e-15
+      }
+    },
+    {
+      "I": 0.42491752753289636,
+      "split": "train",
+      "target": {
+        "period": 12.379447052809155,
+        "Cmin": 0.10316282645590069,
+        "Cmax": 0.3577814424435951
+      },
+      "new": {
+        "status": "integration_failed_or_left_domain"
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 13.634999999999991,
+        "Cmin": 0.06843449486735732,
+        "Cmax": 0.4202682977166316,
+        "peak_difference": 6.962471885307853e-06,
+        "period_relative_difference": 0.00330033003300447
+      }
+    },
+    {
+      "I": 0.4488154620615055,
+      "split": "train",
+      "target": {
+        "period": 12.037972027037654,
+        "Cmin": 0.10347701052298865,
+        "Cmax": 0.39115065232477425
+      },
+      "new": {
+        "status": "integration_failed_or_left_domain"
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 13.410000000000025,
+        "Cmin": 0.071813331683246,
+        "Cmax": 0.4446927756409979,
+        "peak_difference": 2.6638810304291383e-06,
+        "period_relative_difference": 4.2388828382407095e-15
+      }
+    },
+    {
+      "I": 0.4727133965901147,
+      "split": "holdout",
+      "target": {
+        "period": 11.75246391706537,
+        "Cmin": 0.104923816012778,
+        "Cmax": 0.41852700310867597
+      },
+      "new": {
+        "status": "integration_failed_or_left_domain"
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 13.365000000000009,
+        "Cmin": 0.07595495970242071,
+        "Cmax": 0.4679633180632267,
+        "peak_difference": 5.813363187057163e-06,
+        "period_relative_difference": 4.2531551710294035e-15
+      }
+    },
+    {
+      "I": 0.4966113311187238,
+      "split": "train",
+      "target": {
+        "period": 11.520857706893594,
+        "Cmin": 0.10728390850707017,
+        "Cmax": 0.44158287816827524
+      },
+      "new": {
+        "status": "integration_failed_or_left_domain"
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 13.544999999999959,
+        "Cmin": 0.08077247023367172,
+        "Cmax": 0.49083678119374896,
+        "peak_difference": 7.539883289053861e-06,
+        "period_relative_difference": 0.003322259136209613
+      }
+    },
+    {
+      "I": 0.5205092656473329,
+      "split": "train",
+      "target": {
+        "period": 11.336118966842378,
+        "Cmin": 0.11073095470268111,
+        "Cmax": 0.4611692828992795
+      },
+      "new": {
+        "status": "integration_failed_or_left_domain"
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 13.814999999999998,
+        "Cmin": 0.08629893133439856,
+        "Cmax": 0.5136939053501363,
+        "peak_difference": 1.760909097869856e-06,
+        "period_relative_difference": 0.0
+      }
+    },
+    {
+      "I": 0.5444072001759421,
+      "split": "holdout",
+      "target": {
+        "period": 11.190949941293297,
+        "Cmin": 0.11526266864537847,
+        "Cmax": 0.4775978006843754
+      },
+      "new": {
+        "status": "integration_failed_or_left_domain"
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 14.264999999999986,
+        "Cmin": 0.09265304072254235,
+        "Cmax": 0.5367435866552462,
+        "peak_difference": 1.3252101068728095e-06,
+        "period_relative_difference": 0.0
+      }
+    },
+    {
+      "I": 0.5683051347045512,
+      "split": "train",
+      "target": {
+        "period": 11.078135776842373,
+        "Cmin": 0.12166756997504577,
+        "Cmax": 0.4906184378517923
+      },
+      "new": {
+        "status": "integration_failed_or_left_domain"
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 14.894999999999982,
+        "Cmin": 0.10006296902011458,
+        "Cmax": 0.5601004969545383,
+        "peak_difference": 4.746520115395114e-06,
+        "period_relative_difference": 0.0030211480362548485
+      }
+    },
+    {
+      "I": 0.5922030692331604,
+      "split": "train",
+      "target": {
+        "period": 10.988484997913474,
+        "Cmin": 0.13135598581990157,
+        "Cmax": 0.498930638427864
+      },
+      "new": {
+        "status": "integration_failed_or_left_domain"
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 15.839999999999975,
+        "Cmin": 0.1091182920794002,
+        "Cmax": 0.5837313210803318,
+        "peak_difference": 1.4430613959337535e-07,
+        "period_relative_difference": 0.0
+      }
+    },
+    {
+      "I": 0.6161010037617696,
+      "split": "holdout",
+      "target": {
+        "period": 10.901201391544873,
+        "Cmin": 0.14862290888888338,
+        "Cmax": 0.49766128882194854
+      },
+      "new": {
+        "status": "integration_failed_or_left_domain"
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 17.279999999999973,
+        "Cmin": 0.1214494495289255,
+        "Cmax": 0.6072901703763575,
+        "peak_difference": 4.200009322774534e-06,
+        "period_relative_difference": 3.2895497025930616e-15
+      }
+    }
+  ],
+  "limits": "Exploratory field regression with equilibrium penalty. Validation is forward simulation only, no HLB1 proof, unstable-cycle continuation, fold, event solver, or runtime benchmark."
+}

@@ -1,0 +1,404 @@
+{
+  "case": "AFM",
+  "K": 0.075,
+  "source_commit": "416f56d8959990a1eeaef1a35ae6526f9b1ebeef",
+  "geometry": {
+    "C0": 0.06566305807393297,
+    "I1": 0.3180739025524226,
+    "I2": 0.3754273754591211,
+    "height": 0.16482106139549924
+  },
+  "basis": "[1,C,h,I,max(C-C0,0),max(C-upper(I),0)]",
+  "coefficient_rows": [
+    [
+      -0.45472748328188395,
+      0.0831165724208888
+    ],
+    [
+      -21.593653409487942,
+      0.26431123206512636
+    ],
+    [
+      2.077908866486353,
+      -0.1317301116052365
+    ],
+    [
+      0.58598648944683,
+      0.025611001208254956
+    ],
+    [
+      22.77834267366819,
+      -0.41694401183574964
+    ],
+    [
+      -1.222921188578963,
+      0.02727719364524577
+    ]
+  ],
+  "optimizer": {
+    "nfev": 29,
+    "success": true,
+    "message": "`ftol` termination condition is satisfied.",
+    "weighted_field_objective": 0.2679289083246299,
+    "geometry_bounds": [
+      [
+        0.0322211024311651,
+        0.1912465590240299,
+        0.025,
+        0.015
+      ],
+      [
+        0.23015073165117927,
+        0.4912465590240299,
+        0.5,
+        1.2
+      ]
+    ]
+  },
+  "matrices": [
+    {
+      "matrix": [
+        [
+          -21.593653409479607,
+          2.077908866526812
+        ],
+        [
+          0.26431123206771545,
+          -0.1317301116104952
+        ]
+      ],
+      "eigenvalues": [
+        [
+          -21.619213157518164,
+          0.0
+        ],
+        [
+          -0.10617036357193976,
+          0.0
+        ]
+      ]
+    },
+    {
+      "matrix": [
+        [
+          1.1846892643274654,
+          2.077908866526812
+        ],
+        [
+          -0.15263277977455025,
+          -0.1317301116104952
+        ]
+      ],
+      "eigenvalues": [
+        [
+          0.8671891108890734,
+          0.0
+        ],
+        [
+          0.1857700418278968,
+          0.0
+        ]
+      ]
+    },
+    {
+      "matrix": [
+        [
+          -0.03823192470941983,
+          2.077908866526812
+        ],
+        [
+          -0.12535558613704922,
+          -0.1317301116104952
+        ]
+      ],
+      "eigenvalues": [
+        [
+          -0.08498101815995757,
+          0.5082243659688042
+        ],
+        [
+          -0.08498101815995757,
+          -0.5082243659688042
+        ]
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "I": 0.37591485687926446,
+      "split": "train",
+      "target": {
+        "period": 22.13030530725132,
+        "Cmin": 0.05152724037775844,
+        "Cmax": 0.5619781665235629
+      },
+      "new": {
+        "status": "cycle_detected",
+        "period": 21.95999999999998,
+        "Cmin": 0.052203641193135926,
+        "Cmax": 0.4781842029054309,
+        "peak_difference": 9.066992979755994e-07,
+        "period_relative_difference": 0.0
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 25.380000000000052,
+        "Cmin": 0.04567653265486453,
+        "Cmax": 0.6059856778918892,
+        "peak_difference": 2.1610508144087603e-06,
+        "period_relative_difference": 2.239693414531438e-15
+      }
+    },
+    {
+      "I": 0.41259391601010265,
+      "split": "holdout",
+      "target": {
+        "period": 18.71251642697382,
+        "Cmin": 0.051789908723917116,
+        "Cmax": 0.6036854752988029
+      },
+      "new": {
+        "status": "cycle_detected",
+        "period": 19.484999999999957,
+        "Cmin": 0.05230074130008022,
+        "Cmax": 0.5060701661550716,
+        "peak_difference": 3.633820841786317e-06,
+        "period_relative_difference": 2.917291191214172e-15
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 20.65500000000003,
+        "Cmin": 0.04574701991012786,
+        "Cmax": 0.6591121742597178,
+        "peak_difference": 2.2690002551950528e-05,
+        "period_relative_difference": 2.7520415812543178e-15
+      }
+    },
+    {
+      "I": 0.4492729751409408,
+      "split": "train",
+      "target": {
+        "period": 16.75255717164646,
+        "Cmin": 0.05225689092033971,
+        "Cmax": 0.6337909135187976
+      },
+      "new": {
+        "status": "cycle_detected",
+        "period": 17.910000000000025,
+        "Cmin": 0.052448665100007445,
+        "Cmax": 0.5326570683915819,
+        "peak_difference": 1.3701966099843865e-05,
+        "period_relative_difference": 0.0
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 18.360000000000014,
+        "Cmin": 0.04618920565201107,
+        "Cmax": 0.7050878315793034,
+        "peak_difference": 1.4527572873124228e-05,
+        "period_relative_difference": 0.002450980392157728
+      }
+    },
+    {
+      "I": 0.4859520342717789,
+      "split": "train",
+      "target": {
+        "period": 15.450508750341442,
+        "Cmin": 0.05271281821703913,
+        "Cmax": 0.6580258013030107
+      },
+      "new": {
+        "status": "cycle_detected",
+        "period": 16.784999999999968,
+        "Cmin": 0.052650178840765074,
+        "Cmax": 0.5585065814560674,
+        "peak_difference": 4.331112098521217e-06,
+        "period_relative_difference": 3.3865605517311957e-15
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 16.91999999999996,
+        "Cmin": 0.04688475971060095,
+        "Cmax": 0.7483276193296702,
+        "peak_difference": 7.15576415943886e-06,
+        "period_relative_difference": 0.0026595744680826938
+      }
+    },
+    {
+      "I": 0.522631093402617,
+      "split": "holdout",
+      "target": {
+        "period": 14.52113854688821,
+        "Cmin": 0.05326496140814957,
+        "Cmax": 0.6784957367620649
+      },
+      "new": {
+        "status": "cycle_detected",
+        "period": 15.92999999999995,
+        "Cmin": 0.052886007488509156,
+        "Cmax": 0.5839003371960072,
+        "peak_difference": 9.405026105580028e-06,
+        "period_relative_difference": 0.002824858757066723
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 15.930000000000007,
+        "Cmin": 0.047718715046454405,
+        "Cmax": 0.7903945820793823,
+        "peak_difference": 1.970462517264515e-05,
+        "period_relative_difference": 0.0028248587570595765
+      }
+    },
+    {
+      "I": 0.5593101525334553,
+      "split": "train",
+      "target": {
+        "period": 13.829499060486796,
+        "Cmin": 0.05390273399341825,
+        "Cmax": 0.6962703491239415
+      },
+      "new": {
+        "status": "cycle_detected",
+        "period": 15.345000000000027,
+        "Cmin": 0.05316761064592032,
+        "Cmax": 0.6090167656157258,
+        "peak_difference": 1.2258818068322519e-05,
+        "period_relative_difference": 0.00293255131965283
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 15.300000000000068,
+        "Cmin": 0.04875310390708787,
+        "Cmax": 0.8320659161994163,
+        "peak_difference": 2.919879736773545e-06,
+        "period_relative_difference": 7.430512269386636e-15
+      }
+    },
+    {
+      "I": 0.5959892116642934,
+      "split": "train",
+      "target": {
+        "period": 13.301824951795197,
+        "Cmin": 0.05457305541968275,
+        "Cmax": 0.7119878304679711
+      },
+      "new": {
+        "status": "cycle_detected",
+        "period": 14.805000000000007,
+        "Cmin": 0.05348670736331156,
+        "Cmax": 0.6339885372724421,
+        "peak_difference": 4.826150609371638e-06,
+        "period_relative_difference": 3.8394744249110426e-15
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 14.850000000000023,
+        "Cmin": 0.04995131903887168,
+        "Cmax": 0.8737943059067571,
+        "peak_difference": 7.855156177627443e-06,
+        "period_relative_difference": 0.0
+      }
+    },
+    {
+      "I": 0.6326682707951317,
+      "split": "holdout",
+      "target": {
+        "period": 12.894137615644695,
+        "Cmin": 0.055293460417569586,
+        "Cmax": 0.7260681331551337
+      },
+      "new": {
+        "status": "cycle_detected",
+        "period": 14.444999999999993,
+        "Cmin": 0.053857170525068006,
+        "Cmax": 0.6588736033388342,
+        "peak_difference": 5.553495605936654e-06,
+        "period_relative_difference": 0.003115264797504956
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 14.534999999999968,
+        "Cmin": 0.05131464970202822,
+        "Cmax": 0.9158871918647318,
+        "peak_difference": 2.2421728646970784e-05,
+        "period_relative_difference": 0.003095975232203155
+      }
+    },
+    {
+      "I": 0.6693473299259698,
+      "split": "train",
+      "target": {
+        "period": 12.578842120052627,
+        "Cmin": 0.05616659770878999,
+        "Cmax": 0.7388064025124822
+      },
+      "new": {
+        "status": "cycle_detected",
+        "period": 14.129999999999995,
+        "Cmin": 0.054273798532077894,
+        "Cmax": 0.683724406178854,
+        "peak_difference": 9.684597532588768e-06,
+        "period_relative_difference": 0.0
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 14.399999999999977,
+        "Cmin": 0.052881069901189834,
+        "Cmax": 0.9585155137543769,
+        "peak_difference": 1.1454901704399667e-05,
+        "period_relative_difference": 0.0031249999999971626
+      }
+    },
+    {
+      "I": 0.7060263890568079,
+      "split": "train",
+      "target": {
+        "period": 12.338342642419889,
+        "Cmin": 0.057224780529799145,
+        "Cmax": 0.7504198730529656
+      },
+      "new": {
+        "status": "cycle_detected",
+        "period": 13.860000000000014,
+        "Cmin": 0.054758120034427316,
+        "Cmax": 0.7086013121081629,
+        "peak_difference": 9.1441634756384e-06,
+        "period_relative_difference": 0.0032467532467502906
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 14.31000000000006,
+        "Cmin": 0.054675265434288474,
+        "Cmax": 1.0017894965645902,
+        "peak_difference": 1.2552927564080107e-07,
+        "period_relative_difference": 7.944572866639802e-15
+      }
+    },
+    {
+      "I": 0.7427054481876461,
+      "split": "holdout",
+      "target": {
+        "period": 12.161929052376536,
+        "Cmin": 0.058325752042006344,
+        "Cmax": 0.761073260722223
+      },
+      "new": {
+        "status": "cycle_detected",
+        "period": 13.680000000000007,
+        "Cmin": 0.05529424407427323,
+        "Cmax": 0.7335050187726753,
+        "peak_difference": 1.0780882087058075e-07,
+        "period_relative_difference": 0.0
+      },
+      "frozen": {
+        "status": "cycle_detected",
+        "period": 14.310000000000002,
+        "Cmin": 0.05671334127735007,
+        "Cmax": 1.045889567665451,
+        "peak_difference": 8.391724088507857e-06,
+        "period_relative_difference": 0.003144654088051426
+      }
+    }
+  ],
+  "limits": "Exploratory field regression with equilibrium penalty. Validation is forward simulation only, no HLB1 proof, unstable-cycle continuation, fold, event solver, or runtime benchmark."
+}
