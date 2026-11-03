@@ -24,6 +24,15 @@ def run_config(option):
     return subprocess.check_output(['nest-config', option], text=True).strip()
 
 
+def detect_cxx11_abi():
+    import nest.nestkernel_api as kernel
+    output = subprocess.check_output(['nm', '-D', '-C', kernel.__file__], text=True)
+    symbols = [s for s in output.splitlines() if ' T nest::StructuralPlasticityNode::get_synaptic_elements(' in s]
+    if not symbols:
+        raise RuntimeError('Could not detect NEST C++ ABI; pass --cxx11-abi 0 or 1')
+    return int(any('std::__cxx11::' in s or '[abi:cxx11]' in s for s in symbols))
+
+
 def compiler_command(requested):
     options = [requested, os.environ.get('CXX'), run_config('--compiler'), 'g++', 'c++']
     for option in options:
@@ -126,6 +135,7 @@ def main():
     ap.add_argument('--fm', type=Path, default=DEFAULTS['fm'])
     ap.add_argument('--cxx', help='C++ compiler (default: CXX, nest-config, then g++)')
     ap.add_argument('--nest-include', type=Path, help='directory containing nest_extension_interface.h')
+    ap.add_argument('--cxx11-abi', type=int, choices=(0, 1), help='override automatic NEST libstdc++ ABI detection')
     args = ap.parse_args()
     out = HERE / 'build'
     out.mkdir(exist_ok=True)
@@ -139,8 +149,10 @@ GchiModule gchi_pwa_module_LTX_module;
 ''')
     compiler = compiler_command(args.cxx)
     includes, libs = nest_flags(args.nest_include)
+    abi = detect_cxx11_abi() if args.cxx11_abi is None else args.cxx11_abi
+    print('NEST _GLIBCXX_USE_CXX11_ABI =', abi, flush=True)
     cmd = (compiler + ['-std=c++17', '-O2', '-shared', '-fPIC']
-           + shlex.split(run_config('--cflags')) + includes
+           + shlex.split(run_config('--cflags')) + ['-U_GLIBCXX_USE_CXX11_ABI', f'-D_GLIBCXX_USE_CXX11_ABI={abi}'] + includes
            + [str(out / p) for p in ('module.cpp', 'gchi_am_pwa.cpp', 'gchi_fm_pwa.cpp')]
            + ['-o', str(out / 'gchi_pwa_module.so')] + libs + ['-lgsl', '-lgslcblas'])
     print(shlex.join(cmd), flush=True)
