@@ -1,0 +1,30 @@
+{
+  "gamma": 21.202553865109465,
+  "period": 11.17211026554041,
+  "section_crossings": [
+    0.0,
+    11.172110265540697
+  ],
+  "closure": 3.429519817146219e-13,
+  "multipliers": [
+    [
+      1.5694016243319227e-16,
+      0.0
+    ],
+    [
+      0.9999999985309889,
+      3.4253970920787297e-05
+    ],
+    [
+      0.9999999985309889,
+      -3.4253970920787297e-05
+    ]
+  ],
+  "sampled_min_C": 0.01686533778161478,
+  "sampled_max_C": 0.9415500982409929,
+  "sampled_min_I": 2.6267629531028214,
+  "sampled_max_I": 3.619378639369803,
+  "sampled_min_h": 0.5686680478921444,
+  "sampled_max_h": 0.770526421166948,
+  "scope": "Adaptive variational integration with finite sampling; C-switching events are not used to split integration. No formal proof of positivity, non-grazing or nondegeneracy."
+}
