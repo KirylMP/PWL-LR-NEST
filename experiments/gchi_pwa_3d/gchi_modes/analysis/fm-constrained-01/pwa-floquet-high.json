@@ -1,0 +1,158 @@
+[
+  {
+    "gamma": 20,
+    "state": [
+      1.0153538240650621,
+      0.6848315938291872,
+      2.234740641828975
+    ],
+    "period": 12.23342896347043,
+    "multipliers": [
+      [
+        0.9999997728311965,
+        0.0
+      ],
+      [
+        0.07000215818591038,
+        0.0
+      ],
+      [
+        -1.296434483051746e-16,
+        0.0
+      ]
+    ],
+    "closure": 1.1571584303533594e-07,
+    "neutral_multiplier_error": 2.2716880354600733e-07,
+    "note": "Variational integration for continuous PWA field; crossing detection and grazing not analytically resolved."
+  },
+  {
+    "gamma": 21.2025538651,
+    "state": [
+      1.0152410911662362,
+      0.6849517853137099,
+      2.2637147591754925
+    ],
+    "period": 12.235880317489773,
+    "multipliers": [
+      [
+        0.9999998970878697,
+        0.0
+      ],
+      [
+        0.0699413580211805,
+        0.0
+      ],
+      [
+        3.1038992956541802e-18,
+        0.0
+      ]
+    ],
+    "closure": 5.52746895862405e-08,
+    "neutral_multiplier_error": 1.0291213026203394e-07,
+    "note": "Variational integration for continuous PWA field; crossing detection and grazing not analytically resolved."
+  },
+  {
+    "gamma": 30,
+    "state": [
+      1.014497291438991,
+      0.6857027410699411,
+      2.423626544407051
+    ],
+    "period": 12.252284781736876,
+    "multipliers": [
+      [
+        0.9999997170641354,
+        0.0
+      ],
+      [
+        0.06954064270346219,
+        0.0
+      ],
+      [
+        -2.0536681736116975e-16,
+        0.0
+      ]
+    ],
+    "closure": 1.2634956316500813e-07,
+    "neutral_multiplier_error": 2.8293586462613263e-07,
+    "note": "Variational integration for continuous PWA field; crossing detection and grazing not analytically resolved."
+  },
+  {
+    "gamma": 100,
+    "state": [
+      1.0119214401060175,
+      0.6880890625661088,
+      2.8181769202255884
+    ],
+    "period": 12.312139822489826,
+    "multipliers": [
+      [
+        1.0000002096842313,
+        0.0
+      ],
+      [
+        0.06815722858603002,
+        0.0
+      ],
+      [
+        3.5935769833957717e-16,
+        0.0
+      ]
+    ],
+    "closure": 6.056934568661282e-08,
+    "neutral_multiplier_error": 2.0968423131151326e-07,
+    "note": "Variational integration for continuous PWA field; crossing detection and grazing not analytically resolved."
+  },
+  {
+    "gamma": 1000,
+    "state": [
+      1.0094902233712064,
+      0.6902316064892603,
+      3.1087779939826934
+    ],
+    "period": 12.372913566601085,
+    "multipliers": [
+      [
+        1.0000011176228107,
+        0.0
+      ],
+      [
+        0.06685359971160389,
+        0.0
+      ],
+      [
+        2.3157769604858244e-16,
+        0.0
+      ]
+    ],
+    "closure": 5.939127057079204e-07,
+    "neutral_multiplier_error": 1.117622810742347e-06,
+    "note": "Variational integration for continuous PWA field; crossing detection and grazing not analytically resolved."
+  },
+  {
+    "gamma": 10000,
+    "state": [
+      1.008908088345934,
+      0.6907366501498683,
+      3.1724048665719082
+    ],
+    "period": 12.388078053783318,
+    "multipliers": [
+      [
+        0.9999998483124364,
+        0.0
+      ],
+      [
+        0.06654125902513654,
+        0.0
+      ],
+      [
+        -1.4652828248508062e-16,
+        0.0
+      ]
+    ],
+    "closure": 8.511118135295138e-08,
+    "neutral_multiplier_error": 1.5168756362093916e-07,
+    "note": "Variational integration for continuous PWA field; crossing detection and grazing not analytically resolved."
+  }
+]
