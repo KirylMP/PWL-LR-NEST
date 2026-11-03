@@ -1,0 +1,25 @@
+{
+  "gamma": 3.7500176522854862,
+  "Cmax": 0.5575429412857955,
+  "Cmin": 0.1672724867752025,
+  "Imin": 0.5600888057360622,
+  "Imax": 0.8647520321907463,
+  "period": 7.940907825399869,
+  "closure": 1.1300868233860425e-11,
+  "multipliers": [
+    [
+      0.17752239290252944,
+      0.0
+    ],
+    [
+      0.9999924777316539,
+      0.0
+    ],
+    [
+      1.0000075219511693,
+      0.0
+    ]
+  ],
+  "residual": 2.0300111688839818e-10,
+  "note": "Candidate fold; nondegeneracy and parameter transversality not independently established."
+}
