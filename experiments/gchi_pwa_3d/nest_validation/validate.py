@@ -44,6 +44,9 @@ def main():
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
+    module = HERE / 'build/gchi_pwa_module.so'
+    if not module.is_file():
+        raise FileNotFoundError(f'{module} not found; run python build.py first')
     manifest = json.loads((HERE / 'build/manifest.json').read_text())
     for x in manifest.values():
         if hashlib.sha256(Path(x['path']).read_bytes()).hexdigest() != x['sha256']:
@@ -63,7 +66,7 @@ def main():
             g, initial = float(sample['gamma']), np.asarray(sample['peak'], dtype=float)
             nest.ResetKernel()
             nest.SetKernelStatus({'resolution': args.resolution, 'local_num_threads': 1, 'print_time': False})
-            nest.Install('gchi_pwa_module')
+            nest.Install(str(module))
             node = nest.Create('gchi_' + case + '_pwa', params={'IP3_0': g, 'Ca_astro': float(initial[0]),
                                 'h_IP3R': float(initial[1]), 'IP3': float(initial[2])})
             meter = nest.Create('multimeter', params={'interval': args.interval,
