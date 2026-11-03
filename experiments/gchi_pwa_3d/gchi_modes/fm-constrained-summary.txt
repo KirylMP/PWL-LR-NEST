@@ -1,0 +1,9 @@
+seed objective cycles/total lower1_eig lower2_eig Cmax_MAE period_MAE solver_success perturbed
+0 4.21551 11/12 -0.06061 -0.00298 0.0979 0.6503 False False
+1 4.20227 11/12 -0.06015 -0.001 0.0998 0.6497 False True
+2 4.28309 11/12 -0.06402 -0.00265 0.0882 0.8125 False True
+3 4.60116 4/12 -0.13883 -0.0303 0.1788 0.1914 False True
+4 4.19124 11/12 -0.06049 -0.001 0.1027 0.6613 False True
+5 4.5582 9/12 -0.03786 -0.00952 0.1417 1.2422 False True
+6 4.21568 11/12 -0.06858 -0.0018 0.0861 0.6515 False True
+7 4.20215 11/12 -0.05421 -0.00104 0.1025 0.6633 False True

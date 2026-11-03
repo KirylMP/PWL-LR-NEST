@@ -1,0 +1,32 @@
+calls 1 cost 7.7564 feasible True best 7.7564 elapsed 0.2
+calls 76 cost 112010769.02901 feasible False best 6.62799 elapsed 15.4
+calls 151 cost 6.58206 feasible True best 6.58206 elapsed 30.5
+calls 226 cost 6.52467 feasible True best 6.52467 elapsed 45.6
+calls 301 cost 6.36412 feasible True best 6.36411 elapsed 60.8
+calls 376 cost 6.00566 feasible False best 6.17372 elapsed 75.9
+calls 451 cost 5.7308 feasible False best 6.17372 elapsed 91.1
+calls 526 cost 5.48868 feasible True best 5.48868 elapsed 106.3
+calls 601 cost 5.38715 feasible False best 5.41295 elapsed 121.5
+calls 676 cost 5.29668 feasible False best 5.35962 elapsed 136.6
+calls 751 cost 5.21741 feasible True best 5.21741 elapsed 151.8
+calls 826 cost 5.14693 feasible True best 5.14693 elapsed 166.9
+calls 901 cost 5.10526 feasible True best 5.10526 elapsed 182.0
+calls 976 cost 5.04979 feasible True best 5.04979 elapsed 197.2
+calls 1051 cost 5.02866 feasible True best 5.02866 elapsed 212.3
+calls 1126 cost 5.01854 feasible False best 5.02866 elapsed 227.5
+calls 1201 cost 5.00696 feasible True best 5.00696 elapsed 242.6
+calls 1276 cost 4.96222 feasible True best 4.96222 elapsed 257.7
+calls 1351 cost 4.94536 feasible True best 4.94536 elapsed 272.8
+calls 1426 cost 4.9291 feasible True best 4.9291 elapsed 287.9
+calls 1501 cost 4.90928 feasible True best 4.90928 elapsed 303.0
+calls 1576 cost 4.88086 feasible True best 4.88086 elapsed 318.1
+calls 1651 cost 4.82619 feasible False best 4.84927 elapsed 333.2
+calls 1726 cost 4.72701 feasible True best 4.72701 elapsed 348.3
+calls 1801 cost 4.67278 feasible True best 4.67278 elapsed 363.5
+calls 1876 cost 4.60117 feasible True best 4.60116 elapsed 378.6
+Iteration limit reached    (Exit mode 9)
+            Current function value: 4.6011651530163995
+            Iterations: 80
+            Function evaluations: 1876
+            Gradient evaluations: 81
+DONE 4.601164531845228 [-0.13883357140308566, -0.03029889344634125, 1.7641140525356225, -0.27579738058537584] Iteration limit reached
