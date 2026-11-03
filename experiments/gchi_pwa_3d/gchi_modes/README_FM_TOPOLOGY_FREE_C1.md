@@ -39,3 +39,26 @@ python fit_fm_topology_free_c1.py \
 Use physical cycle count before conditional MAE, then onset period at `gamma=.0203`, negative-C and negative-IP3 trajectory minima, continuation of the rest branch, and upper fold diagnostics. Objective values may be compared **within this sweep only**, and the original objective of seed 3 is not directly comparable because the penalty weight changed.
 
 Increasing penalty for `C<0` only controls sampled trajectory excursions; the optimizer's clipped integration may conceal physically invalid trajectories. A stronger penalty alone cannot prove `C>=0` is invariant. Reaching a small fold-proxy residual does not verify a fold of cycles. 12/12 checks from one initial point do not prove unique global attractors. No result is claimed until server validation runs.
+
+## Continue the 12/12 candidate at C1 = 0.045
+
+The initial five-point sweep with 25 SLSQP iterations per knot did not converge for C1=.045. Although that candidate passed 12/12 standard cycle validations, its fitted objective was still decreasing at the iteration cap. **Do not rerun the sweep from the original seed** to refine this point.
+
+After switching to this branch with the updated `fit_fm_topology_free_c1.py`, warm-start from the sweep's saved `candidate-3.json`. The optimizer now reads `fold_proxy.state` and `fold_proxy.period` from `--start` as well as the fitted coefficients. Use a new output path, so the previous candidate stays intact:
+
+```bash
+export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
+python fit_fm_topology_free_c1.py \
+  --data results/FM/reference.json \
+  --start runs/fm-topology-free-c1-01/candidate-3.json \
+  --onset-data analysis/fm-constrained-01/directional-scans.json \
+  --fold-target analysis/fm-constrained-01/reference-fold-candidate.json \
+  --output runs/fm-topology-free-c1-150/candidate-3.json \
+  --seed 0 --maxiter 150 --full-probes \
+  --lower-knot 0.045 --neg-c-weight 8 \
+  2>&1 | tee runs/fm-topology-free-c1-150/fit-3.log
+```
+
+Create the destination directory first with `mkdir -p runs/fm-topology-free-c1-150`. Following fitting, run `validate_modes.py`, `check_fm_onset.py`, `analyze_equilibria.py` and `check_fm_fold_proxy.py` on the new candidate, then compare against the saved 25-iteration results. If the old run has a `candidate-3.checkpoint.npz`, it cannot be directly resumed after code changes because the optimizer signature includes the script hash; warm-start from JSON instead. This restarts SLSQP's internal approximation, but **keeps** the fitted parameter vector.
+
+At `C1=.033` the previous failure was an infeasible starting point, not an iteration limit. That case requires feasible initialization.
