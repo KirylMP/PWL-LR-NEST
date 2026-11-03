@@ -1,0 +1,98 @@
+{
+  "records": [
+    {
+      "gamma": 0.0163346947983831,
+      "success": true,
+      "t_end": 200.0,
+      "physical_event": false,
+      "min_C": 0.11821214998489596,
+      "min_I": 0.3504090261116584,
+      "Cmin": 0.15566601655406398,
+      "Cmax": 0.15656813284572071,
+      "n_peaks": 0,
+      "period": null
+    },
+    {
+      "gamma": 0.027144176165949066,
+      "success": true,
+      "t_end": 200.0,
+      "physical_event": false,
+      "min_C": 0.07902935816128899,
+      "min_I": 0.35110545930355125,
+      "Cmin": 0.15553513934472643,
+      "Cmax": 0.1587625566746576,
+      "n_peaks": 9,
+      "period": 10.450000000000003
+    },
+    {
+      "gamma": 0.058146707253987885,
+      "success": true,
+      "t_end": 200.0,
+      "physical_event": false,
+      "min_C": 0.03858388123398789,
+      "min_I": 0.33779895319239084,
+      "Cmin": 0.15525864709883866,
+      "Cmax": 0.16507039265172882,
+      "n_peaks": 10,
+      "period": 10.400000000000006
+    },
+    {
+      "gamma": 0.09662528040183213,
+      "success": true,
+      "t_end": 200.0,
+      "physical_event": false,
+      "min_C": 0.01865038524896087,
+      "min_I": 0.33213008130226557,
+      "Cmin": 0.15484040188120296,
+      "Cmax": 0.17301339450509848,
+      "n_peaks": 10,
+      "period": 10.400000000000006
+    },
+    {
+      "gamma": 0.20698516906576325,
+      "success": true,
+      "t_end": 4.1000000000000005,
+      "physical_event": true,
+      "min_C": 0.0021584522631550706,
+      "min_I": 0.366794426380508
+    },
+    {
+      "gamma": 0.4433918332243225,
+      "success": true,
+      "t_end": 3.7,
+      "physical_event": true,
+      "min_C": 0.0048212388605891835,
+      "min_I": 0.37898498918373036
+    },
+    {
+      "gamma": 0.7368062997280774,
+      "success": true,
+      "t_end": 3.6,
+      "physical_event": true,
+      "min_C": 0.00865929455305733,
+      "min_I": 0.396000366297332
+    },
+    {
+      "gamma": 1.578344465172115,
+      "success": true,
+      "t_end": 3.9000000000000004,
+      "physical_event": true,
+      "min_C": 0.003953673162258764,
+      "min_I": 0.4476463554671062
+    },
+    {
+      "gamma": 3.3810395644809677,
+      "success": true,
+      "t_end": 200.0,
+      "physical_event": false,
+      "min_C": 0.1110366386374562,
+      "min_I": 0.5661436452958237,
+      "Cmin": 0.138681423011164,
+      "Cmax": 0.5446741971562477,
+      "n_peaks": 12,
+      "period": 8.5
+    }
+  ],
+  "duration": 200.0,
+  "scope": "training gammas and reference-cycle initial states; finite integration, not independent validation or proof of cycle"
+}
