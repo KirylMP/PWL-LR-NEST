@@ -1,0 +1,114 @@
+{
+  "candidate": "gchi_server/gchi_modes/local_multistart/server-candidate-2.json",
+  "events": [
+    {
+      "threshold_index": 0,
+      "C_threshold": 0.041258585230769904,
+      "gamma": 0.010315717532629774,
+      "state": [
+        0.04125858523077054,
+        0.9676074228061664,
+        0.5500191562371154
+      ],
+      "max_real_below_C": -0.12683043214103537,
+      "max_real_above_C": 4.6267829520056605
+    },
+    {
+      "threshold_index": 2,
+      "C_threshold": 0.4241382759168485,
+      "gamma": 0.012051746715313793,
+      "state": [
+        0.4241382759168513,
+        0.6112467725989248,
+        0.47589617034480564
+      ],
+      "max_real_below_C": 0.5965449932450557,
+      "max_real_above_C": -0.23119531769608767
+    },
+    {
+      "threshold_index": 1,
+      "C_threshold": 0.053856099480060336,
+      "gamma": 0.020152517072625137,
+      "state": [
+        0.05385609948007668,
+        0.8975425418916997,
+        0.53483633487186
+      ],
+      "max_real_below_C": 4.6267829520056605,
+      "max_real_above_C": 0.5965449932450557
+    },
+    {
+      "threshold_index": 1,
+      "C_threshold": 0.053856099480060336,
+      "gamma": 0.2084716581866685,
+      "state": [
+        0.05385609948006042,
+        0.8657675646105666,
+        0.7084648451758437
+      ],
+      "max_real_below_C": 4.6267829520056605,
+      "max_real_above_C": 0.5965449932450557
+    },
+    {
+      "threshold_index": 2,
+      "C_threshold": 0.4241382759168485,
+      "gamma": 0.4086306770586091,
+      "state": [
+        0.42413827591694947,
+        0.570118754900458,
+        0.757315355976537
+      ],
+      "max_real_below_C": 0.5965449932450557,
+      "max_real_above_C": -0.23119531769608767
+    },
+    {
+      "threshold_index": 0,
+      "C_threshold": 0.041258585230769904,
+      "gamma": 0.5749728366523752,
+      "state": [
+        0.04125858523076992,
+        0.9261782226036479,
+        0.8890115970882848
+      ],
+      "max_real_below_C": -0.12683043214103537,
+      "max_real_above_C": 4.6267829520056605
+    },
+    {
+      "threshold_index": 0,
+      "C_threshold": 0.041258585230769904,
+      "gamma": 0.9840738515378118,
+      "state": [
+        0.04125858523076991,
+        0.9335981310023765,
+        0.9812083912000722
+      ],
+      "max_real_below_C": -0.12683043214103537,
+      "max_real_above_C": 4.6267829520056605
+    },
+    {
+      "threshold_index": 2,
+      "C_threshold": 0.4241382759168485,
+      "gamma": 1.3118429940001861,
+      "state": [
+        0.4241382759168476,
+        0.5856964798971768,
+        0.9552563474219211
+      ],
+      "max_real_below_C": 0.5965449932450557,
+      "max_real_above_C": -0.23119531769608767
+    },
+    {
+      "threshold_index": 1,
+      "C_threshold": 0.053856099480060336,
+      "gamma": 2.0512253243349936,
+      "state": [
+        0.05385609948006036,
+        0.8923379653146477,
+        1.0807464383279246
+      ],
+      "max_real_below_C": 4.6267829520056605,
+      "max_real_above_C": 0.5965449932450557
+    }
+  ],
+  "scope": "Intersection search on sampled gamma grid; may miss closely spaced or tangential roots. Eigenvalues describe affine cells, not verified attractor basins or local HLB type."
+}

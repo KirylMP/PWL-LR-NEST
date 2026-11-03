@@ -17,13 +17,20 @@ def simulate(g,y0,co,knots,duration):
  def bound(t,y):return min(y[0]+.05,3-y[0],y[1]+.2,2-y[1],y[2]+.05,4-y[2])
  bound.terminal=True
  s=solve_ivp(f,(0,duration),y0,method='DOP853',events=[peak,bound],dense_output=True,rtol=3e-8,atol=3e-10,max_step=.3)
- out={'status':'undetermined','min_C_solver_nodes':float(min(s.y[0])),'end':s.y[:,-1].tolist()}
+ out={'status':'undetermined','min_C_solver_nodes':float(min(s.y[0])),'min_I_solver_nodes':float(min(s.y[2])),'min_h_solver_nodes':float(min(s.y[1])),'max_h_solver_nodes':float(max(s.y[1])),'t_end':float(s.t[-1]),'end':s.y[:,-1].tolist()}
+ violations=[]
+ if np.min(s.y[0]) < -1e-8:violations.append('negative_calcium')
+ if np.min(s.y[2]) < -1e-8:violations.append('negative_ip3')
+ if np.min(s.y[1]) < -1e-8 or np.max(s.y[1]) > 1+1e-8:violations.append('h_outside_0_1')
+ if violations:out['physical_violations']=violations;out['status']=violations[0];return out
  if not s.success or s.t[-1]<duration-1e-5:out['status']='domain_or_integration_failure';return out
- if min(s.y[0]) < -1e-8:out['status']='negative_calcium';return out
  ts=s.t_events[0];ts=ts[ts>duration*.45]
  if len(ts)<4:return out
  delta=np.diff(ts[-4:]);ys=s.sol(np.linspace(ts[-2],ts[-1],300));amp=np.ptp(ys[0]);closure=np.linalg.norm(s.sol(ts[-1])-s.sol(ts[-2]));out.update(Cmin=float(min(ys[0])),Cmax=float(max(ys[0])),Imin=float(min(ys[2])),Imax=float(max(ys[2])),period=float(delta[-1]),closure=float(closure))
- if amp>1e-4 and max(abs(delta-delta[-1]))/delta[-1]<.004 and closure<max(1e-5,.003*amp):out['status']='cycle'
+ if np.min(ys[0]) < -1e-8:out['status']='negative_calcium'
+ elif np.min(ys[2]) < -1e-8:out['status']='negative_ip3'
+ elif np.min(ys[1]) < -1e-8 or np.max(ys[1]) > 1+1e-8:out['status']='h_outside_0_1'
+ elif amp>1e-4 and max(abs(delta-delta[-1]))/delta[-1]<.004 and closure<max(1e-5,.003*amp):out['status']='cycle'
  return out
 
 def main():
@@ -40,7 +47,7 @@ def main():
   for ki,knot in enumerate(knots):
    if ci>knot:matrix[:,0]+=co[7+ki]
   ev=np.linalg.eigvals(matrix);zones.append({'C_sample':float(ci),'eigenvalues':[[float(z.real),float(z.imag)] for z in ev],'max_real':float(max(ev.real))})
- out={'zone_eigenvalues':zones,'mode':can['mode'],'duration':a.duration,'detected_cycles':len(ok),'total':len(valid),'conditional_MAE':mae,'equilibria_at_zero':eigs,'records':valid,'scope':'Each gamma starts from reference cycle state, not a basin or unstable-orbit search; solver node positivity is not proof of invariance; only untrained gamma values unless candidate has no training list.'};a.output.write_text(json.dumps(out,indent=2)+'\n')
+ out={'zone_eigenvalues':zones,'mode':can['mode'],'duration':a.duration,'detected_cycles':len(ok),'total':len(valid),'conditional_MAE':mae,'equilibria_at_zero':eigs,'records':valid,'scope':'Each gamma starts from reference cycle state, not a basin or unstable-orbit search; C, IP3 and h checked on solver nodes and sampled orbit; these checks do not prove invariance between samples; only untrained gamma values unless candidate has no training list.'};a.output.write_text(json.dumps(out,indent=2)+'\n')
  fig,ax=plt.subplots(1,3,figsize=(12,3.5),layout='constrained');
  for j,keys in enumerate([('Cmin','Cmax'),('Imin','Imax'),('period',)]):
   for k in keys:

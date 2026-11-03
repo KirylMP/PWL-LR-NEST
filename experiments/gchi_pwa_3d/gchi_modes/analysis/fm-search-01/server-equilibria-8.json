@@ -1,0 +1,54 @@
+{
+  "candidate": "gchi_server/gchi_modes/local_multistart/server-candidate-8.json",
+  "events": [
+    {
+      "threshold_index": 1,
+      "C_threshold": 0.053856099480060336,
+      "gamma": 0.020152517072796708,
+      "state": [
+        0.05385609948005939,
+        0.8975425418916619,
+        0.5348363348714993
+      ],
+      "max_real_below_C": 2.3944827051433273,
+      "max_real_above_C": 0.48179265559061485
+    },
+    {
+      "threshold_index": 1,
+      "C_threshold": 0.053856099480060336,
+      "gamma": 0.06639234820951469,
+      "state": [
+        0.05385609948006034,
+        0.8783184608168247,
+        0.556870150178028
+      ],
+      "max_real_below_C": 2.3944827051433273,
+      "max_real_above_C": 0.48179265559061485
+    },
+    {
+      "threshold_index": 1,
+      "C_threshold": 0.053856099480060336,
+      "gamma": 0.655396416314359,
+      "state": [
+        0.053856099480060336,
+        0.8419766542396676,
+        1.0326528253953156
+      ],
+      "max_real_below_C": 2.3944827051433273,
+      "max_real_above_C": 0.48179265559061485
+    },
+    {
+      "threshold_index": 2,
+      "C_threshold": 0.4241382759168485,
+      "gamma": 1.3118429940008736,
+      "state": [
+        0.4241382759168687,
+        0.5856964798971629,
+        0.9552563474220302
+      ],
+      "max_real_below_C": 0.48179265559061485,
+      "max_real_above_C": -0.004233083081988501
+    }
+  ],
+  "scope": "Intersection search on sampled gamma grid; may miss closely spaced or tangential roots. Eigenvalues describe affine cells, not verified attractor basins or local HLB type."
+}
