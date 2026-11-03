@@ -3,8 +3,11 @@
 import argparse
 import hashlib
 import json
+import os
 import shlex
+import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -19,6 +22,44 @@ DEFAULTS = {'am': MODES / 'runs/afm-calcium-c1-01/candidate-2.json',
 
 def run_config(option):
     return subprocess.check_output(['nest-config', option], text=True).strip()
+
+
+def compiler_command(requested):
+    options = [requested, os.environ.get('CXX'), run_config('--compiler'), 'g++', 'c++']
+    for option in options:
+        if not option:
+            continue
+        parts = shlex.split(option)
+        if parts and (shutil.which(parts[0]) or Path(parts[0]).is_file()):
+            return parts
+    raise RuntimeError('C++ compiler not found; install g++ or pass --cxx PATH')
+
+
+def nest_flags():
+    # Binary wheels may embed build-host paths in nest-config. Locate the
+    # installed headers relative to PyNEST and omit vanished library paths.
+    import nest
+    platlib = Path(nest.__file__).resolve().parent.parent
+    includes = []
+    for flag in shlex.split(run_config('--includes')):
+        if flag.startswith('-I') and Path(flag[2:]).is_dir():
+            includes.append(flag)
+    for p in (platlib / 'include/nest', Path(sys.prefix) / 'include/nest'):
+        if p.is_dir():
+            includes.append('-I' + str(p))
+    if not any((Path(x[2:]) / 'nest_extension_interface.h').is_file() for x in includes):
+        raise RuntimeError('NEST development headers not found. Install NEST headers or fix nest-config --includes.')
+    libs = []
+    for flag in shlex.split(run_config('--libs')):
+        if flag.startswith('-L') and not Path(flag[2:]).is_dir():
+            continue
+        if flag.startswith('/') and not Path(flag).exists():
+            continue
+        libs.append(flag)
+    for p in (platlib / 'lib64/nest', platlib / 'lib/nest'):
+        if p.is_dir():
+            libs.append('-L' + str(p))
+    return includes, libs
 
 
 def build_source(case, path, out):
@@ -76,6 +117,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--am', type=Path, default=DEFAULTS['am'])
     ap.add_argument('--fm', type=Path, default=DEFAULTS['fm'])
+    ap.add_argument('--cxx', help='C++ compiler (default: CXX, nest-config, then g++)')
     args = ap.parse_args()
     out = HERE / 'build'
     out.mkdir(exist_ok=True)
@@ -87,11 +129,12 @@ class GchiModule : public nest::NESTExtensionInterface { public: void initialize
   nest::register_gchi_am_pwa("gchi_am_pwa"); nest::register_gchi_fm_pwa("gchi_fm_pwa"); } };
 GchiModule gchi_pwa_module_LTX_module;
 ''')
-    compiler = shlex.split(run_config('--compiler'))
+    compiler = compiler_command(args.cxx)
+    includes, libs = nest_flags()
     cmd = (compiler + ['-std=c++17', '-O2', '-shared', '-fPIC']
-           + shlex.split(run_config('--cflags')) + shlex.split(run_config('--includes'))
+           + shlex.split(run_config('--cflags')) + includes
            + [str(out / p) for p in ('module.cpp', 'gchi_am_pwa.cpp', 'gchi_fm_pwa.cpp')]
-           + ['-o', str(out / 'gchi_pwa_module.so')] + shlex.split(run_config('--libs')) + ['-lgsl', '-lgslcblas'])
+           + ['-o', str(out / 'gchi_pwa_module.so')] + libs + ['-lgsl', '-lgslcblas'])
     print(shlex.join(cmd), flush=True)
     subprocess.run(cmd, check=True)
     (out / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
