@@ -1,0 +1,42 @@
+{
+  "candidate": "gchi_server/gchi_modes/local_multistart/constrained-candidate-1.json",
+  "events": [
+    {
+      "threshold_index": 0,
+      "C_threshold": 0.041258585230769904,
+      "gamma": 0.0145783389404988,
+      "state": [
+        0.04125858523076989,
+        0.8617239470548886,
+        0.8248571397826223
+      ],
+      "max_real_below_C": -0.0853055829399482,
+      "max_real_above_C": -0.014539350395934889
+    },
+    {
+      "threshold_index": 1,
+      "C_threshold": 0.053856099480060336,
+      "gamma": 0.020152517072605805,
+      "state": [
+        0.053856099480060926,
+        0.8975425418917929,
+        0.5348363348718594
+      ],
+      "max_real_below_C": -0.014539350395934889,
+      "max_real_above_C": 0.9370717094527569
+    },
+    {
+      "threshold_index": 2,
+      "C_threshold": 0.4241382759168485,
+      "gamma": 1.3118429940002956,
+      "state": [
+        0.42413827591684905,
+        0.5856964798971733,
+        0.9552563474219434
+      ],
+      "max_real_below_C": 0.9370717094527569,
+      "max_real_above_C": -0.19115645955094665
+    }
+  ],
+  "scope": "Intersection search on sampled gamma grid; may miss closely spaced or tangential roots. Eigenvalues describe affine cells, not verified attractor basins or local HLB type."
+}
