@@ -1,0 +1,370 @@
+{
+  "nest_version": "3.10.0",
+  "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+  "processor": "",
+  "python": "3.12.15 (main, Oct  1 2026, 15:41:07) [GCC 15.2.0]",
+  "settings": {
+    "nodes": [
+      1,
+      100,
+      1000
+    ],
+    "duration": 5.0,
+    "warmup": 1.0,
+    "resolution": 0.1,
+    "repeats": 3,
+    "threads": 1,
+    "out": "/media/disk1/kizemin/Users/lab_b/Documents/mikholap/PWL-LR-NEST/experiments/gchi_pwa_3d/nest_validation/results/speed.json"
+  },
+  "manifest": {
+    "am": {
+      "path": "/media/disk1/kizemin/Users/lab_b/Documents/mikholap/PWL-LR-NEST/experiments/gchi_pwa_3d/gchi_modes/runs/afm-calcium-c1-01/candidate-2.json",
+      "sha256": "d8e0334ddf664719a7c3b37f7a5723fcf236a87ff61d73d5b7ce09083759f2d2"
+    },
+    "fm": {
+      "path": "/media/disk1/kizemin/Users/lab_b/Documents/mikholap/PWL-LR-NEST/experiments/gchi_pwa_3d/gchi_modes/runs/fm-topology-free-c1-01/candidate-3.json",
+      "sha256": "3f2c570329afceaa6ae105619f2d19d2387106836930325e2bfeb58783939196"
+    }
+  },
+  "scenarios": {
+    "am": {
+      "mode": "AFM",
+      "gamma": 0.26682225415632393,
+      "initial": [
+        0.4416716508694526,
+        0.6531902297080402,
+        0.45309203851078467
+      ]
+    },
+    "fm": {
+      "mode": "FM",
+      "gamma": 0.6835491850677583,
+      "initial": [
+        1.0691528969189448,
+        0.7118071881005004,
+        0.8220931484460123
+      ]
+    }
+  },
+  "prechecks": [
+    {
+      "mode": "am",
+      "model": "pwa",
+      "max_abs": 1.4324597064074851e-11
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "max_abs": 1.534883331544279e-14
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "max_abs": 8.215650382226158e-15
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "max_abs": 4.9404924595819466e-15
+    }
+  ],
+  "runs": [
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 1,
+      "repeat": 2,
+      "wall_seconds": 0.05469710899342317
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 1000,
+      "repeat": 1,
+      "wall_seconds": 17.819360541005153
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 1,
+      "repeat": 1,
+      "wall_seconds": 0.056024771998636425
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 1000,
+      "repeat": 2,
+      "wall_seconds": 17.97780432399304
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 100,
+      "repeat": 1,
+      "wall_seconds": 1.4947556760016596
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 1,
+      "repeat": 0,
+      "wall_seconds": 0.0545925799960969
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 1,
+      "repeat": 0,
+      "wall_seconds": 0.05812292400514707
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 1000,
+      "repeat": 0,
+      "wall_seconds": 14.828583383001387
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 1,
+      "repeat": 2,
+      "wall_seconds": 0.052922488990589045
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 100,
+      "repeat": 1,
+      "wall_seconds": 1.795620909993886
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 100,
+      "repeat": 1,
+      "wall_seconds": 1.8210707100079162
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 1,
+      "repeat": 2,
+      "wall_seconds": 0.05807041500520427
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 1000,
+      "repeat": 1,
+      "wall_seconds": 14.662093627994182
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 1,
+      "repeat": 0,
+      "wall_seconds": 0.054836572002386674
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 1000,
+      "repeat": 0,
+      "wall_seconds": 17.959274886001367
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 1,
+      "repeat": 2,
+      "wall_seconds": 0.0581148080091225
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 100,
+      "repeat": 2,
+      "wall_seconds": 1.7986938179965364
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 1000,
+      "repeat": 0,
+      "wall_seconds": 14.73712429900479
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 100,
+      "repeat": 2,
+      "wall_seconds": 1.812668662998476
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 1000,
+      "repeat": 2,
+      "wall_seconds": 17.844301998004084
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 100,
+      "repeat": 0,
+      "wall_seconds": 1.4900605570001062
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 100,
+      "repeat": 2,
+      "wall_seconds": 1.5107340349932201
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 100,
+      "repeat": 0,
+      "wall_seconds": 1.5000050840026233
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 1000,
+      "repeat": 1,
+      "wall_seconds": 14.819727438007249
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 1000,
+      "repeat": 2,
+      "wall_seconds": 14.676520579989301
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 1000,
+      "repeat": 1,
+      "wall_seconds": 17.913555331993848
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 1,
+      "repeat": 1,
+      "wall_seconds": 0.054476039003930055
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 100,
+      "repeat": 1,
+      "wall_seconds": 1.4882921889948193
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 1000,
+      "repeat": 2,
+      "wall_seconds": 14.81925913100713
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 100,
+      "repeat": 0,
+      "wall_seconds": 1.796176331001334
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 1,
+      "repeat": 1,
+      "wall_seconds": 0.053069626999786124
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 100,
+      "repeat": 0,
+      "wall_seconds": 1.8046989959984785
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 1000,
+      "repeat": 0,
+      "wall_seconds": 17.7650234039902
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 1,
+      "repeat": 1,
+      "wall_seconds": 0.0576679130026605
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 1,
+      "repeat": 0,
+      "wall_seconds": 0.0580683010048233
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 100,
+      "repeat": 2,
+      "wall_seconds": 1.488304642989533
+    }
+  ],
+  "summary": [
+    {
+      "mode": "am",
+      "nodes": 1,
+      "pwa_median_s": 0.0545925799960969,
+      "reference_median_s": 0.0580683010048233,
+      "speedup_reference_over_pwa": 1.0636665460576307
+    },
+    {
+      "mode": "am",
+      "nodes": 100,
+      "pwa_median_s": 1.488304642989533,
+      "reference_median_s": 1.812668662998476,
+      "speedup_reference_over_pwa": 1.2179419526350455
+    },
+    {
+      "mode": "am",
+      "nodes": 1000,
+      "pwa_median_s": 14.676520579989301,
+      "reference_median_s": 17.959274886001367,
+      "speedup_reference_over_pwa": 1.2236738802034548
+    },
+    {
+      "mode": "fm",
+      "nodes": 1,
+      "pwa_median_s": 0.053069626999786124,
+      "reference_median_s": 0.0581148080091225,
+      "speedup_reference_over_pwa": 1.0950672031170807
+    },
+    {
+      "mode": "fm",
+      "nodes": 100,
+      "pwa_median_s": 1.5000050840026233,
+      "reference_median_s": 1.796176331001334,
+      "speedup_reference_over_pwa": 1.1974468287856768
+    },
+    {
+      "mode": "fm",
+      "nodes": 1000,
+      "pwa_median_s": 14.819727438007249,
+      "reference_median_s": 17.819360541005153,
+      "speedup_reference_over_pwa": 1.2024081155031858
+    }
+  ],
+  "scope": "Fixed glutamate, independent identical nodes, no recording/connections. Both use adaptive GSL RKF45 with identical tolerances. PWA is not an exact event solver."
+}
