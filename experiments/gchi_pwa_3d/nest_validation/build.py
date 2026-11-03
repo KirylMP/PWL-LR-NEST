@@ -78,7 +78,7 @@ def nest_flags(extra_include=None):
     return includes, libs
 
 
-def build_source(case, path, out):
+def build_source(case, path, out, reference=False):
     raw = path.read_bytes()
     d = json.loads(raw)
     co = np.asarray(d['coefficients'], dtype=float)
@@ -87,7 +87,7 @@ def build_source(case, path, out):
         raise ValueError(f'{path}: unexpected model, basis or coefficient dimensions')
     if not np.all(np.isfinite(co)) or not np.all(np.isfinite(knots)) or not np.all(np.diff(knots) > 0):
         raise ValueError(f'{path}: invalid coefficients or knots')
-    name = 'gchi_' + case + '_pwa'
+    name = 'gchi_' + case + ('_reference' if reference else '_pwa')
     literal = lambda a: ','.join(format(float(x), '.17g') for x in np.ravel(a))
     for ext in ('h', 'cpp'):
         src = (UPSTREAM / f'astrocyte_lr_1994.{ext}').read_text()
@@ -112,6 +112,19 @@ def build_source(case, path, out):
   f[S::IP3] = result[2] / 1000.;
 
 '''.replace('NAME', name)
+            if reference:
+                ker, vdelta, r5, vbeta = ((.1, .02, .04, .2) if case == 'am' else (.05, .05, .05, .5))
+                body = '''  typedef nest::NAME::State_ S;
+  const nest::NAME& node = *(reinterpret_cast<nest::NAME*>(pnode));
+  const double C = y[S::Ca_astro], h = y[S::h_IP3R], I = y[S::IP3], g = node.P_.IP3_0_;
+  const double q=1.049*(I+.13)/(I+.9434), m=I/(I+.13), n=C/(C+.08234);
+  const double c2=C*C, c4=c2*c2, gp=std::pow(g,.7);
+  f[S::Ca_astro]=((6*m*m*m*n*n*n*h*h*h+.11)*(2-1.185*C)-.9*c2/(c2+KER*KER))/1000.;
+  f[S::h_IP3R]=.2*(q-(q+C)*h)/1000.;
+  f[S::IP3]=(VBETA*gp/(gp+std::pow(1.3+10*C/(C+.6),.7))
+    + VDELTA/(1+I/1.5)*c2/(c2+.01)-2*c4/(c4+std::pow(.7,4))*I/(I+1)-R5*I)/1000.;
+
+'''.replace('NAME', name).replace('KER', repr(ker)).replace('VBETA', repr(vbeta)).replace('VDELTA', repr(vdelta)).replace('R5', repr(r5))
             src = src[:start] + body + src[end:]
             src = src.replace('#include "' + name + '.h"', '#include "' + name + '.h"\n'
                               + 'static const double KNOTS[3] = {' + literal(knots) + '};\n'
@@ -140,11 +153,15 @@ def main():
     out = HERE / 'build'
     out.mkdir(exist_ok=True)
     manifest = {case: build_source(case, getattr(args, case), out) for case in ('am', 'fm')}
+    for case in ('am', 'fm'):
+        build_source(case, getattr(args, case), out, reference=True)
     (out / 'module.cpp').write_text('''#include "nest_extension_interface.h"
 #include <string>
-namespace nest { void register_gchi_am_pwa(const std::string&); void register_gchi_fm_pwa(const std::string&); }
+namespace nest { void register_gchi_am_pwa(const std::string&); void register_gchi_fm_pwa(const std::string&);
+void register_gchi_am_reference(const std::string&); void register_gchi_fm_reference(const std::string&); }
 class GchiModule : public nest::NESTExtensionInterface { public: void initialize() override {
-  nest::register_gchi_am_pwa("gchi_am_pwa"); nest::register_gchi_fm_pwa("gchi_fm_pwa"); } };
+  nest::register_gchi_am_pwa("gchi_am_pwa"); nest::register_gchi_fm_pwa("gchi_fm_pwa");
+  nest::register_gchi_am_reference("gchi_am_reference"); nest::register_gchi_fm_reference("gchi_fm_reference"); } };
 GchiModule gchi_pwa_module_LTX_module;
 ''')
     compiler = compiler_command(args.cxx)
@@ -153,7 +170,7 @@ GchiModule gchi_pwa_module_LTX_module;
     print('NEST _GLIBCXX_USE_CXX11_ABI =', abi, flush=True)
     cmd = (compiler + ['-std=c++17', '-O2', '-shared', '-fPIC']
            + shlex.split(run_config('--cflags')) + ['-U_GLIBCXX_USE_CXX11_ABI', f'-D_GLIBCXX_USE_CXX11_ABI={abi}'] + includes
-           + [str(out / p) for p in ('module.cpp', 'gchi_am_pwa.cpp', 'gchi_fm_pwa.cpp')]
+           + [str(out / p) for p in ('module.cpp', 'gchi_am_pwa.cpp', 'gchi_fm_pwa.cpp', 'gchi_am_reference.cpp', 'gchi_fm_reference.cpp')]
            + ['-o', str(out / 'gchi_pwa_module.so')] + libs + ['-lgsl', '-lgslcblas'])
     print(shlex.join(cmd), flush=True)
     subprocess.run(cmd, check=True)
