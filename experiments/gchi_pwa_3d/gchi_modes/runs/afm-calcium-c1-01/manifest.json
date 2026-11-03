@@ -1,0 +1,24 @@
+{
+  "git_head": "680355ce6606dc4b0757a6eb22bf426e2698cf5c",
+  "python": "3.12.15",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "nfev": 70,
+  "workers": 5,
+  "calcium_weight": 3.0,
+  "negative_c_weight": 8.0,
+  "c1_values": [
+    0.095,
+    0.105,
+    0.11277377008786005,
+    0.12,
+    0.135
+  ],
+  "sha256": {
+    "fit_afm_calcium_free_c1.py": "bea5e40e5c0e101743ccbd65d2dc52328d54a24607d5c5fe0e60cfb739dc511f",
+    "fit_modes.py": "e2b9573427929cb06bfc67116d2224a920c86f6976c199fa96228e81947cd08e",
+    "explore_modes.py": "2e165e2d7474c6ed30110ed20b4ead9e8413577d0d5c66344f77feefff821c5b",
+    "results/AFM/reference.json": "7ad46d1a500c20b54ea055e657d804664920e1e1a00841dd5e738fe5932ffea0",
+    "results/AFM/candidate_segments.json": "7ef97c449b0c9c01c871c21ac080b29e93e171d0c1b2b8698223bfada2aa9038"
+  }
+}

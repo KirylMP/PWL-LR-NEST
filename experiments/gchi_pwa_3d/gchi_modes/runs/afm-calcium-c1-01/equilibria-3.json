@@ -1,0 +1,42 @@
+{
+  "candidate": "/media/disk1/kizemin/Users/lab_b/Documents/mikholap/PWL-LR-NEST/experiments/gchi_pwa_3d/gchi_modes/runs/afm-calcium-c1-01/candidate-3.json",
+  "events": [
+    {
+      "threshold_index": 0,
+      "C_threshold": 0.12,
+      "gamma": 0.004068765907380468,
+      "state": [
+        0.12000000000017416,
+        0.7496127322070839,
+        0.255342641466923
+      ],
+      "max_real_below_C": -0.00988933161948808,
+      "max_real_above_C": -0.009706122106247703
+    },
+    {
+      "threshold_index": 1,
+      "C_threshold": 0.15574847824214638,
+      "gamma": 0.012990740120612498,
+      "state": [
+        0.15574847824214622,
+        0.7154752593434849,
+        0.35462526973977004
+      ],
+      "max_real_below_C": -0.009706122106247703,
+      "max_real_above_C": 0.030696484857586304
+    },
+    {
+      "threshold_index": 2,
+      "C_threshold": 0.3587624427037859,
+      "gamma": 2.0859007658287,
+      "state": [
+        0.3587624427037894,
+        0.5986846014822207,
+        0.7172909476700569
+      ],
+      "max_real_below_C": 0.030696484857586304,
+      "max_real_above_C": -0.008359041500293582
+    }
+  ],
+  "scope": "Intersection search on sampled gamma grid; may miss closely spaced or tangential roots. Eigenvalues describe affine cells, not verified attractor basins or local HLB type."
+}
