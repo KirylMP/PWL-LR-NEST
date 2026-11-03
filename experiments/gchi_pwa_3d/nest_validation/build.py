@@ -35,16 +35,21 @@ def compiler_command(requested):
     raise RuntimeError('C++ compiler not found; install g++ or pass --cxx PATH')
 
 
-def nest_flags():
+def nest_flags(extra_include=None):
     # Binary wheels may embed build-host paths in nest-config. Locate the
     # installed headers relative to PyNEST and omit vanished library paths.
     import nest
     platlib = Path(nest.__file__).resolve().parent.parent
     includes = []
+    if extra_include:
+        if not (Path(extra_include) / 'nest_extension_interface.h').is_file():
+            raise RuntimeError('--nest-include must point to the directory containing nest_extension_interface.h')
+        includes.append('-I' + str(Path(extra_include).resolve()))
     for flag in shlex.split(run_config('--includes')):
         if flag.startswith('-I') and Path(flag[2:]).is_dir():
             includes.append(flag)
-    for p in (platlib / 'include/nest', Path(sys.prefix) / 'include/nest'):
+    for p in (Path(nest.__file__).resolve().parent / 'include/nest',
+              platlib / 'include/nest', Path(sys.prefix) / 'include/nest'):
         if p.is_dir():
             includes.append('-I' + str(p))
     if not any((Path(x[2:]) / 'nest_extension_interface.h').is_file() for x in includes):
@@ -56,7 +61,9 @@ def nest_flags():
         if flag.startswith('/') and not Path(flag).exists():
             continue
         libs.append(flag)
-    for p in (platlib / 'lib64/nest', platlib / 'lib/nest'):
+    for p in (Path(nest.__file__).resolve().parent / 'lib64/nest',
+              Path(nest.__file__).resolve().parent / 'lib/nest',
+              platlib / 'lib64/nest', platlib / 'lib/nest'):
         if p.is_dir():
             libs.append('-L' + str(p))
     return includes, libs
@@ -118,6 +125,7 @@ def main():
     ap.add_argument('--am', type=Path, default=DEFAULTS['am'])
     ap.add_argument('--fm', type=Path, default=DEFAULTS['fm'])
     ap.add_argument('--cxx', help='C++ compiler (default: CXX, nest-config, then g++)')
+    ap.add_argument('--nest-include', type=Path, help='directory containing nest_extension_interface.h')
     args = ap.parse_args()
     out = HERE / 'build'
     out.mkdir(exist_ok=True)
@@ -130,7 +138,7 @@ class GchiModule : public nest::NESTExtensionInterface { public: void initialize
 GchiModule gchi_pwa_module_LTX_module;
 ''')
     compiler = compiler_command(args.cxx)
-    includes, libs = nest_flags()
+    includes, libs = nest_flags(args.nest_include)
     cmd = (compiler + ['-std=c++17', '-O2', '-shared', '-fPIC']
            + shlex.split(run_config('--cflags')) + includes
            + [str(out / p) for p in ('module.cpp', 'gchi_am_pwa.cpp', 'gchi_fm_pwa.cpp')]
