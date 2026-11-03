@@ -1,0 +1,26 @@
+{
+  "git_head": "c4c243de5655a51f360b5ae2c3de2a9238b19822",
+  "source_seed": 3,
+  "python": "3.12.15",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "maxiter": 25,
+  "negative_calcium_weight": 8.0,
+  "parallel_workers": 5,
+  "c1_values": [
+    0.033,
+    0.037,
+    0.041258585230769904,
+    0.045,
+    0.049
+  ],
+  "sha256": {
+    "fit_fm_topology_free_c1.py": "bba95a4738162f99747e8c3fd1dc45b074e89ab2aeb6a8cc2ef701c87a8f8a18",
+    "fit_modes.py": "e2b9573427929cb06bfc67116d2224a920c86f6976c199fa96228e81947cd08e",
+    "explore_modes.py": "2e165e2d7474c6ed30110ed20b4ead9e8413577d0d5c66344f77feefff821c5b",
+    "results/FM/reference.json": "6ed10b2346582a751da0928dc3baab3a4602e580acd025bd9f853e420ca9c773",
+    "runs/fm-topology-01/candidate-3.json": "3a0e9030ea55abeef8e5c30d82f05db74c4359b2525632c80c163b6ee06eecbf",
+    "analysis/fm-constrained-01/directional-scans.json": "e0002a6293d81b14bd56749e4ac50787e5c62670d7ca8e3781705bb42de6c3a0",
+    "analysis/fm-constrained-01/reference-fold-candidate.json": "5a6201d638ad16cf0acf34be19a5bb7be7780be85025fd1cc14b15b5ab57f252"
+  }
+}

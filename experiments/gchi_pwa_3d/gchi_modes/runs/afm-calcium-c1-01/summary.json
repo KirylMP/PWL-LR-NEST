@@ -1,0 +1,92 @@
+[
+  {
+    "index": 0,
+    "c1": 0.095,
+    "objective": 0.09243992506588708,
+    "cycles": 12,
+    "total": 12,
+    "conditional_MAE": {
+      "Cmin": 0.019914903380797187,
+      "Cmax": 0.016322176987721138,
+      "Imin": 0.009196206582628994,
+      "Imax": 0.012283748843399741,
+      "period": 0.40838684186694724
+    },
+    "optimizer_success": true,
+    "max_anchor_residual": 8.835284775371966e-16,
+    "rejected": []
+  },
+  {
+    "index": 1,
+    "c1": 0.105,
+    "objective": 0.09051615062591102,
+    "cycles": 12,
+    "total": 12,
+    "conditional_MAE": {
+      "Cmin": 0.01554528660896748,
+      "Cmax": 0.012761657402525469,
+      "Imin": 0.012072173799540726,
+      "Imax": 0.011490043106537553,
+      "period": 0.3742965456198135
+    },
+    "optimizer_success": false,
+    "max_anchor_residual": 7.942552437118851e-16,
+    "rejected": []
+  },
+  {
+    "index": 2,
+    "c1": 0.11277377008786005,
+    "objective": 0.0918249588067712,
+    "cycles": 12,
+    "total": 12,
+    "conditional_MAE": {
+      "Cmin": 0.015195408900211427,
+      "Cmax": 0.012933144482293586,
+      "Imin": 0.010315318267527596,
+      "Imax": 0.010467464933858436,
+      "period": 0.36099151562290405
+    },
+    "optimizer_success": true,
+    "max_anchor_residual": 1.3242788014710735e-15,
+    "rejected": []
+  },
+  {
+    "index": 3,
+    "c1": 0.12,
+    "objective": 0.0924651231039418,
+    "cycles": 12,
+    "total": 12,
+    "conditional_MAE": {
+      "Cmin": 0.01641150304462806,
+      "Cmax": 0.01409343590332846,
+      "Imin": 0.009380657761065253,
+      "Imax": 0.010164904658826116,
+      "period": 0.37738816324521923
+    },
+    "optimizer_success": true,
+    "max_anchor_residual": 1.3980792562362625e-15,
+    "rejected": []
+  },
+  {
+    "index": 4,
+    "c1": 0.135,
+    "objective": 0.09076235467716229,
+    "cycles": 11,
+    "total": 12,
+    "conditional_MAE": {
+      "Cmin": 0.020210902981258994,
+      "Cmax": 0.016491068186086342,
+      "Imin": 0.017344964756947346,
+      "Imax": 0.009482636715899757,
+      "period": 0.20410734367862915
+    },
+    "optimizer_success": false,
+    "max_anchor_residual": 5.754027369750187e-16,
+    "rejected": [
+      {
+        "gamma": 3.3810395644809677,
+        "status": "undetermined"
+      }
+    ]
+  }
+]
