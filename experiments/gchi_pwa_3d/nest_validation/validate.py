@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Compare NEST 3D PWA trajectories to SciPy PWA and original G-ChI."""
 import argparse
+import ctypes
 import hashlib
 import json
 import sys
@@ -41,6 +42,10 @@ def main():
     if not np.isclose(args.interval / args.resolution, round(args.interval / args.resolution)):
         ap.error('interval must be a multiple of resolution')
     import nest
+    import nest.nestkernel_api as nest_kernel
+    # Pip wheels may contain the kernel inside this extension rather than a
+    # separate libnest.so; make its symbols visible to the NEST module loader.
+    kernel_handle = ctypes.CDLL(nest_kernel.__file__, mode=ctypes.RTLD_GLOBAL)
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
