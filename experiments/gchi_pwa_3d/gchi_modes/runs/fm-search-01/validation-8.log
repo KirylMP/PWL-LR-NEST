@@ -1,0 +1,13 @@
+FM 0.02336 domain_or_integration_failure
+FM 0.03664 domain_or_integration_failure
+FM 0.07199 domain_or_integration_failure
+FM 0.11292 domain_or_integration_failure
+FM 0.22183 domain_or_integration_failure
+FM 0.43578 domain_or_integration_failure
+FM 0.85609 cycle
+FM 1.68179 cycle
+FM 2.63799 cycle
+FM 5.18234 domain_or_integration_failure
+FM 10.18071 domain_or_integration_failure
+FM 20.0 domain_or_integration_failure
+SUMMARY 3 12 {'Cmin': 0.008276336845047598, 'Cmax': 0.2806211334779744, 'Imin': 0.14646329964008994, 'Imax': 0.023962154600801755, 'period': 0.7190775063935083}
