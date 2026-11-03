@@ -1,0 +1,25 @@
+{
+  "gamma": 0.22182799879745482,
+  "duration": 1600,
+  "t_end": 1600.0,
+  "solver_success": true,
+  "min_C_nodes": 0.009586950695994582,
+  "min_I_nodes": -0.03799268109789089,
+  "min_h_nodes": 0.6195779969201393,
+  "max_h_nodes": 0.8156257137724652,
+  "end": [
+    0.049168449875020385,
+    0.8058158536516948,
+    0.6278345796550643
+  ],
+  "classification": "cycle_with_negative_state",
+  "scope": "Numerical nodes and finite sampling; negative values can be transient or sustained. No proof of positivity or complete basin structure.",
+  "tail_period": 15.875195441551114,
+  "tail_Cmin": 0.010567743278745878,
+  "tail_Cmax": 0.8452261934555764,
+  "tail_Imin": -0.03799495260986718,
+  "tail_Imax": 0.6338230680184077,
+  "tail_hmin": 0.624283436540393,
+  "tail_hmax": 0.8156279045554762,
+  "tail_closure": 2.699307537232283e-08
+}

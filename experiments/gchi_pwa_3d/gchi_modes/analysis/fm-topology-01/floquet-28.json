@@ -1,0 +1,28 @@
+[
+  {
+    "gamma": 21.202553865109465,
+    "state": [
+      1.085972357956039,
+      0.6121553482731109,
+      2.1119334881527214
+    ],
+    "period": 11.665632535149712,
+    "multipliers": [
+      [
+        0.999999968253646,
+        0.0
+      ],
+      [
+        0.005567652626343374,
+        0.0
+      ],
+      [
+        -3.472524488261377e-16,
+        0.0
+      ]
+    ],
+    "closure": 7.630699482086973e-08,
+    "neutral_multiplier_error": 3.174635399005865e-08,
+    "note": "Variational integration for continuous PWA field; switching events and grazing are not analytically resolved."
+  }
+]
