@@ -54,6 +54,11 @@
     },
     {
       "mode": "am",
+      "model": "analytic",
+      "max_abs": 4.237110662330679e-12
+    },
+    {
+      "mode": "am",
       "model": "reference",
       "max_abs": 1.534883331544279e-14
     },
@@ -64,307 +69,450 @@
     },
     {
       "mode": "fm",
+      "model": "analytic",
+      "max_abs": 4.7940540426338885e-12
+    },
+    {
+      "mode": "fm",
       "model": "reference",
       "max_abs": 4.9404924595819466e-15
     }
   ],
   "runs": [
     {
-      "mode": "am",
+      "mode": "fm",
       "model": "pwa",
       "nodes": 1,
-      "repeat": 2,
-      "wall_seconds": 0.05469710899342317
-    },
-    {
-      "mode": "fm",
-      "model": "reference",
-      "nodes": 1000,
-      "repeat": 1,
-      "wall_seconds": 17.819360541005153
+      "repeat": 0,
+      "wall_seconds": 0.052952448997530155
     },
     {
       "mode": "fm",
       "model": "reference",
       "nodes": 1,
       "repeat": 1,
-      "wall_seconds": 0.056024771998636425
-    },
-    {
-      "mode": "am",
-      "model": "reference",
-      "nodes": 1000,
-      "repeat": 2,
-      "wall_seconds": 17.97780432399304
-    },
-    {
-      "mode": "fm",
-      "model": "pwa",
-      "nodes": 100,
-      "repeat": 1,
-      "wall_seconds": 1.4947556760016596
-    },
-    {
-      "mode": "am",
-      "model": "pwa",
-      "nodes": 1,
-      "repeat": 0,
-      "wall_seconds": 0.0545925799960969
-    },
-    {
-      "mode": "fm",
-      "model": "reference",
-      "nodes": 1,
-      "repeat": 0,
-      "wall_seconds": 0.05812292400514707
-    },
-    {
-      "mode": "fm",
-      "model": "pwa",
-      "nodes": 1000,
-      "repeat": 0,
-      "wall_seconds": 14.828583383001387
-    },
-    {
-      "mode": "fm",
-      "model": "pwa",
-      "nodes": 1,
-      "repeat": 2,
-      "wall_seconds": 0.052922488990589045
-    },
-    {
-      "mode": "fm",
-      "model": "reference",
-      "nodes": 100,
-      "repeat": 1,
-      "wall_seconds": 1.795620909993886
-    },
-    {
-      "mode": "am",
-      "model": "reference",
-      "nodes": 100,
-      "repeat": 1,
-      "wall_seconds": 1.8210707100079162
-    },
-    {
-      "mode": "am",
-      "model": "reference",
-      "nodes": 1,
-      "repeat": 2,
-      "wall_seconds": 0.05807041500520427
-    },
-    {
-      "mode": "am",
-      "model": "pwa",
-      "nodes": 1000,
-      "repeat": 1,
-      "wall_seconds": 14.662093627994182
-    },
-    {
-      "mode": "fm",
-      "model": "pwa",
-      "nodes": 1,
-      "repeat": 0,
-      "wall_seconds": 0.054836572002386674
-    },
-    {
-      "mode": "am",
-      "model": "reference",
-      "nodes": 1000,
-      "repeat": 0,
-      "wall_seconds": 17.959274886001367
-    },
-    {
-      "mode": "fm",
-      "model": "reference",
-      "nodes": 1,
-      "repeat": 2,
-      "wall_seconds": 0.0581148080091225
-    },
-    {
-      "mode": "fm",
-      "model": "reference",
-      "nodes": 100,
-      "repeat": 2,
-      "wall_seconds": 1.7986938179965364
-    },
-    {
-      "mode": "am",
-      "model": "pwa",
-      "nodes": 1000,
-      "repeat": 0,
-      "wall_seconds": 14.73712429900479
-    },
-    {
-      "mode": "am",
-      "model": "reference",
-      "nodes": 100,
-      "repeat": 2,
-      "wall_seconds": 1.812668662998476
-    },
-    {
-      "mode": "fm",
-      "model": "reference",
-      "nodes": 1000,
-      "repeat": 2,
-      "wall_seconds": 17.844301998004084
-    },
-    {
-      "mode": "am",
-      "model": "pwa",
-      "nodes": 100,
-      "repeat": 0,
-      "wall_seconds": 1.4900605570001062
-    },
-    {
-      "mode": "fm",
-      "model": "pwa",
-      "nodes": 100,
-      "repeat": 2,
-      "wall_seconds": 1.5107340349932201
-    },
-    {
-      "mode": "fm",
-      "model": "pwa",
-      "nodes": 100,
-      "repeat": 0,
-      "wall_seconds": 1.5000050840026233
+      "wall_seconds": 0.05604514399601612
     },
     {
       "mode": "fm",
       "model": "pwa",
       "nodes": 1000,
       "repeat": 1,
-      "wall_seconds": 14.819727438007249
+      "wall_seconds": 14.641242401005002
     },
     {
       "mode": "am",
-      "model": "pwa",
-      "nodes": 1000,
-      "repeat": 2,
-      "wall_seconds": 14.676520579989301
-    },
-    {
-      "mode": "am",
-      "model": "reference",
-      "nodes": 1000,
-      "repeat": 1,
-      "wall_seconds": 17.913555331993848
-    },
-    {
-      "mode": "am",
-      "model": "pwa",
-      "nodes": 1,
-      "repeat": 1,
-      "wall_seconds": 0.054476039003930055
-    },
-    {
-      "mode": "am",
-      "model": "pwa",
+      "model": "analytic",
       "nodes": 100,
       "repeat": 1,
-      "wall_seconds": 1.4882921889948193
+      "wall_seconds": 0.27112806600052863
+    },
+    {
+      "mode": "fm",
+      "model": "analytic",
+      "nodes": 1,
+      "repeat": 2,
+      "wall_seconds": 0.03911827800038736
+    },
+    {
+      "mode": "fm",
+      "model": "analytic",
+      "nodes": 1,
+      "repeat": 1,
+      "wall_seconds": 0.039061030009179376
     },
     {
       "mode": "fm",
       "model": "pwa",
       "nodes": 1000,
       "repeat": 2,
-      "wall_seconds": 14.81925913100713
+      "wall_seconds": 14.677643614006229
     },
     {
-      "mode": "fm",
-      "model": "reference",
-      "nodes": 100,
-      "repeat": 0,
-      "wall_seconds": 1.796176331001334
-    },
-    {
-      "mode": "fm",
+      "mode": "am",
       "model": "pwa",
-      "nodes": 1,
+      "nodes": 100,
       "repeat": 1,
-      "wall_seconds": 0.053069626999786124
+      "wall_seconds": 1.4863080080103828
+    },
+    {
+      "mode": "am",
+      "model": "analytic",
+      "nodes": 1000,
+      "repeat": 2,
+      "wall_seconds": 2.4440917409956455
     },
     {
       "mode": "am",
       "model": "reference",
       "nodes": 100,
       "repeat": 0,
-      "wall_seconds": 1.8046989959984785
+      "wall_seconds": 1.8003872880071867
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 1,
+      "repeat": 0,
+      "wall_seconds": 0.05578112399962265
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 1,
+      "repeat": 1,
+      "wall_seconds": 0.05488348500512075
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 100,
+      "repeat": 1,
+      "wall_seconds": 1.8092412810074165
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 1000,
+      "repeat": 2,
+      "wall_seconds": 17.743752580005093
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 1,
+      "repeat": 1,
+      "wall_seconds": 0.05804232599621173
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 100,
+      "repeat": 0,
+      "wall_seconds": 1.4884303660073783
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 1000,
+      "repeat": 1,
+      "wall_seconds": 17.770156136000878
+    },
+    {
+      "mode": "am",
+      "model": "analytic",
+      "nodes": 1000,
+      "repeat": 0,
+      "wall_seconds": 2.4872523920057574
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 1000,
+      "repeat": 0,
+      "wall_seconds": 17.78782988600142
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 100,
+      "repeat": 1,
+      "wall_seconds": 1.4951501879986608
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 1000,
+      "repeat": 1,
+      "wall_seconds": 17.78776314998686
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 1,
+      "repeat": 2,
+      "wall_seconds": 0.052799208991928026
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 1,
+      "repeat": 0,
+      "wall_seconds": 0.0527265510027064
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 1,
+      "repeat": 0,
+      "wall_seconds": 0.05606692499713972
+    },
+    {
+      "mode": "fm",
+      "model": "analytic",
+      "nodes": 1000,
+      "repeat": 1,
+      "wall_seconds": 2.4464731799962465
+    },
+    {
+      "mode": "fm",
+      "model": "analytic",
+      "nodes": 100,
+      "repeat": 1,
+      "wall_seconds": 0.2733570659911493
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 1000,
+      "repeat": 0,
+      "wall_seconds": 14.679833120011608
+    },
+    {
+      "mode": "am",
+      "model": "analytic",
+      "nodes": 100,
+      "repeat": 2,
+      "wall_seconds": 0.2732656830048654
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 100,
+      "repeat": 2,
+      "wall_seconds": 1.7912043140095193
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 1000,
+      "repeat": 2,
+      "wall_seconds": 17.839170534003642
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 100,
+      "repeat": 2,
+      "wall_seconds": 1.8059694770054193
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 1,
+      "repeat": 2,
+      "wall_seconds": 0.05290412799513433
+    },
+    {
+      "mode": "fm",
+      "model": "analytic",
+      "nodes": 1000,
+      "repeat": 0,
+      "wall_seconds": 2.509048005013028
+    },
+    {
+      "mode": "fm",
+      "model": "analytic",
+      "nodes": 1,
+      "repeat": 0,
+      "wall_seconds": 0.039108248995034955
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 1,
+      "repeat": 2,
+      "wall_seconds": 0.05612303200177848
+    },
+    {
+      "mode": "fm",
+      "model": "analytic",
+      "nodes": 100,
+      "repeat": 2,
+      "wall_seconds": 0.27458727500925306
+    },
+    {
+      "mode": "am",
+      "model": "reference",
+      "nodes": 1,
+      "repeat": 2,
+      "wall_seconds": 0.05773487300029956
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 100,
+      "repeat": 1,
+      "wall_seconds": 1.7965993369871285
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 1,
+      "repeat": 1,
+      "wall_seconds": 0.05283888398844283
+    },
+    {
+      "mode": "am",
+      "model": "analytic",
+      "nodes": 1,
+      "repeat": 2,
+      "wall_seconds": 0.03894873699755408
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 1000,
+      "repeat": 1,
+      "wall_seconds": 14.673160746999201
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 100,
+      "repeat": 2,
+      "wall_seconds": 1.4895799520018045
+    },
+    {
+      "mode": "fm",
+      "model": "analytic",
+      "nodes": 1000,
+      "repeat": 2,
+      "wall_seconds": 2.5101767930027563
+    },
+    {
+      "mode": "am",
+      "model": "analytic",
+      "nodes": 1000,
+      "repeat": 1,
+      "wall_seconds": 2.496886891996837
+    },
+    {
+      "mode": "fm",
+      "model": "pwa",
+      "nodes": 1000,
+      "repeat": 0,
+      "wall_seconds": 14.75873337298981
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 100,
+      "repeat": 0,
+      "wall_seconds": 1.4876102129928768
+    },
+    {
+      "mode": "am",
+      "model": "pwa",
+      "nodes": 1000,
+      "repeat": 2,
+      "wall_seconds": 14.705982163999579
+    },
+    {
+      "mode": "fm",
+      "model": "reference",
+      "nodes": 100,
+      "repeat": 0,
+      "wall_seconds": 1.7946741320047295
+    },
+    {
+      "mode": "fm",
+      "model": "analytic",
+      "nodes": 100,
+      "repeat": 0,
+      "wall_seconds": 0.27771402400685474
+    },
+    {
+      "mode": "am",
+      "model": "analytic",
+      "nodes": 100,
+      "repeat": 0,
+      "wall_seconds": 0.27602756199485157
     },
     {
       "mode": "fm",
       "model": "reference",
       "nodes": 1000,
       "repeat": 0,
-      "wall_seconds": 17.7650234039902
+      "wall_seconds": 17.802046511002118
     },
     {
       "mode": "am",
-      "model": "reference",
+      "model": "analytic",
       "nodes": 1,
       "repeat": 1,
-      "wall_seconds": 0.0576679130026605
+      "wall_seconds": 0.038933447998715565
     },
     {
       "mode": "am",
-      "model": "reference",
+      "model": "analytic",
       "nodes": 1,
       "repeat": 0,
-      "wall_seconds": 0.0580683010048233
+      "wall_seconds": 0.038950650006881915
     },
     {
       "mode": "am",
       "model": "pwa",
       "nodes": 100,
       "repeat": 2,
-      "wall_seconds": 1.488304642989533
+      "wall_seconds": 1.49368281000352
     }
   ],
   "summary": [
     {
       "mode": "am",
       "nodes": 1,
-      "pwa_median_s": 0.0545925799960969,
-      "reference_median_s": 0.0580683010048233,
-      "speedup_reference_over_pwa": 1.0636665460576307
+      "gsl_pwa_s": 0.052799208991928026,
+      "analytic_pwa_s": 0.03894873699755408,
+      "gchi_s": 0.05773487300029956,
+      "speedup_gchi_over_analytic": 1.4823297865582963,
+      "speedup_gsl_pwa_over_analytic": 1.3556077311375652
     },
     {
       "mode": "am",
       "nodes": 100,
-      "pwa_median_s": 1.488304642989533,
-      "reference_median_s": 1.812668662998476,
-      "speedup_reference_over_pwa": 1.2179419526350455
+      "gsl_pwa_s": 1.4876102129928768,
+      "analytic_pwa_s": 0.2732656830048654,
+      "gchi_s": 1.8059694770054193,
+      "speedup_gchi_over_analytic": 6.6088410997924845,
+      "speedup_gsl_pwa_over_analytic": 5.443823741916361
     },
     {
       "mode": "am",
       "nodes": 1000,
-      "pwa_median_s": 14.676520579989301,
-      "reference_median_s": 17.959274886001367,
-      "speedup_reference_over_pwa": 1.2236738802034548
+      "gsl_pwa_s": 14.679833120011608,
+      "analytic_pwa_s": 2.4872523920057574,
+      "gchi_s": 17.78782988600142,
+      "speedup_gchi_over_analytic": 7.151598262875544,
+      "speedup_gsl_pwa_over_analytic": 5.90202794344227
     },
     {
       "mode": "fm",
       "nodes": 1,
-      "pwa_median_s": 0.053069626999786124,
-      "reference_median_s": 0.0581148080091225,
-      "speedup_reference_over_pwa": 1.0950672031170807
+      "gsl_pwa_s": 0.05290412799513433,
+      "analytic_pwa_s": 0.039108248995034955,
+      "gchi_s": 0.05606692499713972,
+      "speedup_gchi_over_analytic": 1.4336342443830143,
+      "speedup_gsl_pwa_over_analytic": 1.3527613573763133
     },
     {
       "mode": "fm",
       "nodes": 100,
-      "pwa_median_s": 1.5000050840026233,
-      "reference_median_s": 1.796176331001334,
-      "speedup_reference_over_pwa": 1.1974468287856768
+      "gsl_pwa_s": 1.4895799520018045,
+      "analytic_pwa_s": 0.27458727500925306,
+      "gchi_s": 1.7946741320047295,
+      "speedup_gchi_over_analytic": 6.535896945494843,
+      "speedup_gsl_pwa_over_analytic": 5.4247960032073905
     },
     {
       "mode": "fm",
       "nodes": 1000,
-      "pwa_median_s": 14.819727438007249,
-      "reference_median_s": 17.819360541005153,
-      "speedup_reference_over_pwa": 1.2024081155031858
+      "gsl_pwa_s": 14.677643614006229,
+      "analytic_pwa_s": 2.509048005013028,
+      "gchi_s": 17.78776314998686,
+      "speedup_gchi_over_analytic": 7.089447118766664,
+      "speedup_gsl_pwa_over_analytic": 5.849885528168687
     }
   ],
-  "scope": "Fixed glutamate, independent identical nodes, no recording/connections. Both use adaptive GSL RKF45 with identical tolerances. PWA is not an exact event solver."
+  "scope": "Fixed glutamate, independent identical nodes, no recording/connections. G-ChI and numeric PWA use adaptive GSL RKF45 with identical tolerances. Analytic PWA uses matrix exponentials and a finite crossing scan; grazing or multiple crossings inside half a NEST step can be missed."
 }
