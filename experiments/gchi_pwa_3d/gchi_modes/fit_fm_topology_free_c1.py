@@ -19,7 +19,14 @@ def main():
  if args.lower_knot is not None:
   if not np.isfinite(args.lower_knot) or not anchors[0,0]+1e-4 < args.lower_knot < kn[1]-1e-4:raise ValueError('lower-knot must lie strictly between rest calcium and second threshold')
   kn[0]=args.lower_knot
- N=null_space(design(anchors,ag,kn));base=np.array(d['coefficients']);v0=(N.T@base).ravel();shape=(N.shape[1],3);p=P['FM'];nc=v0.size;fold=json.loads(args.fold_target.read_text());fy0=np.array(fold['state']);ft0=float(fold['period']);fg=float(fold['gamma']);v0=np.r_[v0,fy0,ft0];fold_lb=np.array([.7,.4,.5,8.]);fold_ub=np.array([1.5,.95,4.,25.]);vbase=v0.copy()
+ N=null_space(design(anchors,ag,kn));base=np.array(d['coefficients']);v0=(N.T@base).ravel();shape=(N.shape[1],3);p=P['FM'];nc=v0.size;fold=json.loads(args.fold_target.read_text());fy0=np.array(fold['state']);ft0=float(fold['period']);fg=float(fold['gamma']);
+ # Warm-start both PWA coefficients and the independently optimized fold proxy.
+ # Without this, using a previously fitted candidate silently resets four variables.
+ if d.get('fold_proxy') is not None:
+  fp=d['fold_proxy']
+  if not np.isclose(float(fp['gamma']),fg,rtol=0,atol=1e-7):raise ValueError('starting fold gamma differs from reference')
+  fy0=np.array(fp['state'],dtype=float);ft0=float(fp['period'])
+ v0=np.r_[v0,fy0,ft0];fold_lb=np.array([.7,.4,.5,8.]);fold_ub=np.array([1.5,.95,4.,25.]);vbase=v0.copy()
  good=[x for x in ref['cycles'] if x['status']=='cycle'];idx=np.unique(np.linspace(1,len(good)-2,min(9,len(good)-2),dtype=int));train=[good[i] for i in idx];near=json.loads(args.onset_data.read_text());near=[dict(z['result'],gamma=z['gamma']) for z in near['reference_low'] if z['result']['status']=='cycle'];train+=near;phases=[];X=[];G=[];Y=[]
  for q in train:
   g=q['gamma'];T=q['period'];s=solve_ivp(field,(0,T),q['peak'],args=(g,p),t_eval=np.linspace(0,T,41),method='DOP853',rtol=1e-9,atol=1e-11,max_step=.15)
