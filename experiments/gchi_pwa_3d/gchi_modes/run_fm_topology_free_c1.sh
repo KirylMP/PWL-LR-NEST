@@ -33,14 +33,17 @@ PY
 for spec in "0 .033" "1 .037" "2 .041258585230769904" "3 .045" "4 .049"; do
   read -r idx knot <<< "$spec"
   echo "=== C1=$knot seed=3 index=$idx ==="
-  python "$here/fit_fm_topology_free_c1.py" \
+  if ! python "$here/fit_fm_topology_free_c1.py" \
     --data "$here/results/FM/reference.json" \
     --start "$here/runs/fm-topology-01/candidate-3.json" \
     --onset-data "$here/analysis/fm-constrained-01/directional-scans.json" \
     --fold-target "$here/analysis/fm-constrained-01/reference-fold-candidate.json" \
     --output "$run/candidate-$idx.json" --seed 0 --maxiter "$maxiter" \
     --full-probes --lower-knot "$knot" --neg-c-weight "$weight" \
-    > "$run/fit-$idx.log" 2>&1
+    > "$run/fit-$idx.log" 2>&1; then
+    echo "FIT FAILED for C1=$knot (see fit-$idx.log)" >&2
+    continue
+  fi
   python "$here/validate_modes.py" --reference "$here/results/FM/reference.json" \
     --candidate "$run/candidate-$idx.json" \
     --output "$run/validation-$idx.json" > "$run/validation-$idx.log" 2>&1
@@ -57,6 +60,8 @@ import json,sys
 from pathlib import Path
 run=Path(sys.argv[1]);rows=[]
 for i in range(5):
+    if not (run/f'validation-{i}.json').exists():
+        rows.append(dict(index=i,status='failed_or_incomplete'));continue
     c=json.loads((run/f'candidate-{i}.json').read_text())
     v=json.loads((run/f'validation-{i}.json').read_text())
     rows.append(dict(index=i,c1=c['knots'][0],
@@ -68,6 +73,8 @@ for i in range(5):
                                         if r['candidate']['status'].startswith(('negative','h_outside'))]))
 (run/'summary.json').write_text(json.dumps(rows,indent=2)+'\n')
 for r in rows:
+    if 'c1' not in r:
+        print(r['index'],r['status']);continue
     print(r['index'], 'C1=',round(r['c1'],6),
           'cycles=',str(r['cycles'])+'/'+str(r['total']),
           'period_MAE=',r['errors']['period'],
