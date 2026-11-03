@@ -16,11 +16,11 @@ From `experiments/gchi_pwa_3d/gchi_modes`:
 
 ```bash
 source ../gchi_pwa_trial/.venv/bin/activate
-bash run_fm_topology_free_c1.sh runs/fm-topology-free-c1-01 25 8 \
+bash run_fm_topology_free_c1.sh runs/fm-topology-free-c1-01 25 8 5 \
   | tee fm-topology-free-c1-summary.txt
 ```
 
-Positional arguments: new empty output directory, SLSQP max iterations per knot, negative calcium weight. The runner writes manifest, fit/candidate/validation/equilibria/onset/fold-check per knot, and `summary.json`. Failed starting points are reported and skipped. This may be expensive: each knot independently integrates long onset and fold trajectories for optimizer evaluations.
+Positional arguments: new empty output directory, SLSQP max iterations per knot, negative calcium weight, maximum parallel workers (default: 5, max: 16). Five knot cases run concurrently by default on a 16-core server. Each case writes disjoint files and runs its own independent diagnostics. BLAS, OpenMP, MKL and NumExpr threads are limited to one per process; failed cases are tracked in status-N.txt and summary.json. The runner writes manifest, fit/candidate/validation/equilibria/onset/fold-check per knot, and `summary.json`. Failed starting points are reported and skipped. This may be expensive: each knot independently integrates long onset and fold trajectories for optimizer evaluations.
 
 For a smaller first test, run a single fixed knot (e.g. `0.037`):
 
