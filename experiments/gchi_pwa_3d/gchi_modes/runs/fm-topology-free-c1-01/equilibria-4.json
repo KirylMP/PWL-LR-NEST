@@ -1,0 +1,54 @@
+{
+  "candidate": "/media/disk1/kizemin/Users/lab_b/Documents/mikholap/PWL-LR-NEST/experiments/gchi_pwa_3d/gchi_modes/runs/fm-topology-free-c1-01/candidate-4.json",
+  "events": [
+    {
+      "threshold_index": 0,
+      "C_threshold": 0.049,
+      "gamma": 0.017398350308480998,
+      "state": [
+        0.04899999999999999,
+        0.895390637486861,
+        0.612780364484839
+      ],
+      "max_real_below_C": -0.14036725999093647,
+      "max_real_above_C": -0.26156007293784606
+    },
+    {
+      "threshold_index": 1,
+      "C_threshold": 0.053856099480060336,
+      "gamma": 0.0201525170726051,
+      "state": [
+        0.05385609948006043,
+        0.8975425418917918,
+        0.5348363348718655
+      ],
+      "max_real_below_C": -0.26156007293784606,
+      "max_real_above_C": 2.2990696908118995
+    },
+    {
+      "threshold_index": 2,
+      "C_threshold": 0.4241382759168485,
+      "gamma": 1.3118429940002485,
+      "state": [
+        0.42413827591684616,
+        0.5856964798971774,
+        0.9552563474219229
+      ],
+      "max_real_below_C": 2.2990696908118995,
+      "max_real_above_C": -0.39724396277449736
+    },
+    {
+      "threshold_index": 2,
+      "C_threshold": 0.4241382759168485,
+      "gamma": 13.500721035566691,
+      "state": [
+        0.42413827591684894,
+        0.546404890126451,
+        1.8355564836912959
+      ],
+      "max_real_below_C": 2.2990696908118995,
+      "max_real_above_C": -0.39724396277449736
+    }
+  ],
+  "scope": "Intersection search on sampled gamma grid; may miss closely spaced or tangential roots. Eigenvalues describe affine cells, not verified attractor basins or local HLB type."
+}

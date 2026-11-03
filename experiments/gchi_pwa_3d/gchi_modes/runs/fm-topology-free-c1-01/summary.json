@@ -1,0 +1,149 @@
+[
+  {
+    "index": 0,
+    "status": "failed_or_incomplete"
+  },
+  {
+    "index": 1,
+    "c1": 0.037,
+    "objective": 67.97667169553841,
+    "cycles": 0,
+    "total": 12,
+    "errors": {
+      "Cmin": null,
+      "Cmax": null,
+      "Imin": null,
+      "Imax": null,
+      "period": null
+    },
+    "solver_success": false,
+    "physical_failures": [
+      {
+        "gamma": 0.023361974420339836,
+        "status": "negative_calcium"
+      },
+      {
+        "gamma": 0.03664467780188155,
+        "status": "negative_calcium"
+      },
+      {
+        "gamma": 0.07198847153274834,
+        "status": "negative_calcium"
+      },
+      {
+        "gamma": 0.11291829608677019,
+        "status": "negative_calcium"
+      },
+      {
+        "gamma": 0.22182799879745482,
+        "status": "negative_calcium"
+      },
+      {
+        "gamma": 0.4357811156897981,
+        "status": "negative_calcium"
+      },
+      {
+        "gamma": 0.8560920254491522,
+        "status": "negative_calcium"
+      },
+      {
+        "gamma": 1.6817928305074292,
+        "status": "negative_calcium"
+      },
+      {
+        "gamma": 2.637994344767486,
+        "status": "negative_calcium"
+      },
+      {
+        "gamma": 5.182340033621318,
+        "status": "negative_calcium"
+      },
+      {
+        "gamma": 10.180707277612223,
+        "status": "negative_calcium"
+      },
+      {
+        "gamma": 20.0,
+        "status": "negative_calcium"
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "c1": 0.041258585230769904,
+    "objective": 29.537777317036472,
+    "cycles": 9,
+    "total": 12,
+    "errors": {
+      "Cmin": 0.025909861122360118,
+      "Cmax": 0.15005534129790274,
+      "Imin": 0.3217526099452877,
+      "Imax": 0.5283469076471017,
+      "period": 0.6617354712706174
+    },
+    "solver_success": false,
+    "physical_failures": [
+      {
+        "gamma": 0.023361974420339836,
+        "status": "negative_calcium"
+      },
+      {
+        "gamma": 0.03664467780188155,
+        "status": "negative_calcium"
+      },
+      {
+        "gamma": 0.07198847153274834,
+        "status": "negative_calcium"
+      }
+    ]
+  },
+  {
+    "index": 3,
+    "c1": 0.045,
+    "objective": 29.512279013492353,
+    "cycles": 12,
+    "total": 12,
+    "errors": {
+      "Cmin": 0.019297582517677058,
+      "Cmax": 0.13176882575545765,
+      "Imin": 0.25056238494618516,
+      "Imax": 0.4434861758131024,
+      "period": 3.0174897336182958
+    },
+    "solver_success": false,
+    "physical_failures": []
+  },
+  {
+    "index": 4,
+    "c1": 0.049,
+    "objective": 77.46398728932549,
+    "cycles": 5,
+    "total": 12,
+    "errors": {
+      "Cmin": 0.020858432992370755,
+      "Cmax": 0.041728482701140227,
+      "Imin": 0.09901303727967789,
+      "Imax": 0.5603807589639264,
+      "period": 9.928630015250656
+    },
+    "solver_success": true,
+    "physical_failures": [
+      {
+        "gamma": 0.11291829608677019,
+        "status": "negative_ip3"
+      },
+      {
+        "gamma": 0.22182799879745482,
+        "status": "negative_ip3"
+      },
+      {
+        "gamma": 0.4357811156897981,
+        "status": "negative_ip3"
+      },
+      {
+        "gamma": 0.8560920254491522,
+        "status": "negative_ip3"
+      }
+    ]
+  }
+]
