@@ -66,18 +66,18 @@ def main():
     for case, s in scenarios.items():
         data = json.loads(Path(manifest[case]['path']).read_text())
         co, knots = np.array(data['coefficients']), np.array(data['knots'])
-        for which in ('pwa', 'reference'):
+        for which in ('pwa', 'analytic', 'reference'):
             node = setup(case, which, 1)
             nest.Simulate(2000.)
             actual = np.array([nest.GetStatus(node, name)[0] for name in ('Ca_astro', 'h_IP3R', 'IP3')])
-            rhs = (lambda t, y: design(y, s['gamma'], knots)[0] @ co) if which == 'pwa' else (lambda t, y: field(t, y, s['gamma'], P[s['mode']]))
+            rhs = (lambda t, y: design(y, s['gamma'], knots)[0] @ co) if which in ('pwa', 'analytic') else (lambda t, y: field(t, y, s['gamma'], P[s['mode']]))
             sol = solve_ivp(rhs, (0., 2.), s['initial'], method='DOP853', rtol=1e-11, atol=1e-13, max_step=.01)
             error = float(np.max(np.abs(actual - sol.y[:, -1])))
             checks.append({'mode': case, 'model': which, 'max_abs': error})
             if not sol.success or error > 1e-4:
                 raise RuntimeError(f'Correctness precheck failed: {case} {which} max error {error}')
 
-    tasks = [(case, which, count, repeat) for case in scenarios for which in ('pwa', 'reference')
+    tasks = [(case, which, count, repeat) for case in scenarios for which in ('pwa', 'analytic', 'reference')
              for count in args.nodes for repeat in range(args.repeats)]
     random.Random(20261103).shuffle(tasks)
     results = []
@@ -98,13 +98,13 @@ def main():
     summary = []
     for case in scenarios:
         for n in args.nodes:
-            times = {which: [x['wall_seconds'] for x in results if x['mode'] == case and x['model'] == which and x['nodes'] == n] for which in ('pwa', 'reference')}
-            pwa, ref = statistics.median(times['pwa']), statistics.median(times['reference'])
-            summary.append({'mode': case, 'nodes': n, 'pwa_median_s': pwa, 'reference_median_s': ref, 'speedup_reference_over_pwa': ref / pwa})
+            times = {which: [x['wall_seconds'] for x in results if x['mode'] == case and x['model'] == which and x['nodes'] == n] for which in ('pwa', 'analytic', 'reference')}
+            pwa, analytic, ref = (statistics.median(times[k]) for k in ('pwa', 'analytic', 'reference'))
+            summary.append({'mode': case, 'nodes': n, 'gsl_pwa_s': pwa, 'analytic_pwa_s': analytic, 'gchi_s': ref, 'speedup_gchi_over_analytic': ref / analytic, 'speedup_gsl_pwa_over_analytic': pwa / analytic})
     result = {'nest_version': str(getattr(nest, '__version__', 'unknown')), 'platform': platform.platform(),
               'processor': platform.processor(), 'python': sys.version, 'settings': vars(args) | {'out': str(args.out)},
               'manifest': manifest, 'scenarios': scenarios, 'prechecks': checks, 'runs': results, 'summary': summary,
-              'scope': 'Fixed glutamate, independent identical nodes, no recording/connections. Both use adaptive GSL RKF45 with identical tolerances. PWA is not an exact event solver.'}
+              'scope': 'Fixed glutamate, independent identical nodes, no recording/connections. G-ChI and numeric PWA use adaptive GSL RKF45 with identical tolerances. Analytic PWA uses matrix exponentials and a finite crossing scan; grazing or multiple crossings inside half a NEST step can be missed.'}
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(result, indent=2) + '\n')
     for row in summary:
