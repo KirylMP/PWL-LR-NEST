@@ -1,0 +1,41 @@
+{
+  "gamma": 21.202553865109465,
+  "period": 11.454712564127403,
+  "integration_success": true,
+  "t_end": 11.454712564127403,
+  "start_state": [
+    1.0448150937593483,
+    0.5856198389373392,
+    1.8507867954905168
+  ],
+  "min_C_nodes": 0.01587966336349528,
+  "min_I_nodes": 1.3572787767201133,
+  "min_h_nodes": 0.4184853021978255,
+  "max_h_nodes": 0.637609548946411,
+  "phase_Cdot": 0.26732364608032566,
+  "note": "One unconverged fitted shooting point; not proof of an orbit, fold, nondegeneracy, transversality, or global physical invariance.",
+  "closure": 0.20226447317530827,
+  "variational_eigenvalues": [
+    [
+      0.2371862711302402,
+      0.0
+    ],
+    [
+      -0.002180206059068364,
+      0.0
+    ],
+    [
+      -5.528402260142939e-16,
+      0.0
+    ]
+  ],
+  "Cmin": 0.015875745092278792,
+  "Cmax": 1.0973725252189315,
+  "Imin": 1.357258332745483,
+  "Imax": 2.6460596946435895,
+  "min_C_sampled": 0.015875745092278792,
+  "min_I_sampled": 1.357258332745483,
+  "min_h_sampled": 0.4184796369095327,
+  "max_h_sampled": 0.63761410237608,
+  "physical_at_checked_points": true
+}

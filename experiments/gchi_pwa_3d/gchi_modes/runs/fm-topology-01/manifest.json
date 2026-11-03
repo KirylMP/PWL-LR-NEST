@@ -1,0 +1,18 @@
+{
+  "git_head": "9730dae0bfa90e5ac175da93322efd426aba863b",
+  "python": "3.12.15",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "count": 32,
+  "workers": 16,
+  "maxiter": 30,
+  "file_sha256": {
+    "fit_fm_topology.py": "26a4950d27efc4882851dc6ed4c93e1396c273b6c5642ef374541a4dd0d41d3a",
+    "fit_modes.py": "e2b9573427929cb06bfc67116d2224a920c86f6976c199fa96228e81947cd08e",
+    "explore_modes.py": "2e165e2d7474c6ed30110ed20b4ead9e8413577d0d5c66344f77feefff821c5b",
+    "results/FM/reference.json": "6ed10b2346582a751da0928dc3baab3a4602e580acd025bd9f853e420ca9c773",
+    "runs/fm-constrained-01/candidate-6.json": "cba62bcf26e5277b50f3755b77a62594e18d96ce64939a765f1d0b4ee103e595",
+    "analysis/fm-constrained-01/directional-scans.json": "e0002a6293d81b14bd56749e4ac50787e5c62670d7ca8e3781705bb42de6c3a0",
+    "analysis/fm-constrained-01/reference-fold-candidate.json": "5a6201d638ad16cf0acf34be19a5bb7be7780be85025fd1cc14b15b5ab57f252"
+  }
+}

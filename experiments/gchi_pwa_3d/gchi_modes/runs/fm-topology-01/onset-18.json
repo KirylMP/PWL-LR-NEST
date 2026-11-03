@@ -1,0 +1,134 @@
+{
+  "duration": 1600,
+  "records": [
+    {
+      "gamma": 0.0203,
+      "initial_type": "reference_peak",
+      "initial": [
+        0.8744884300010956,
+        0.7963882227825149,
+        0.31509475514339613
+      ],
+      "reference": {
+        "period": 154.1850092251766,
+        "Cmin": 0.029343774728128665,
+        "Cmax": 0.8744884300796941,
+        "Imin": 0.15659064149673388,
+        "Imax": 0.5368781338361303
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.0016171303651399305,
+        "min_I_solver_nodes": 0.04105370023324523,
+        "min_h_solver_nodes": 0.6473021024287463,
+        "max_h_solver_nodes": 0.9003696291921938,
+        "t_end": 1600.0,
+        "end": [
+          0.03712996363681361,
+          0.864350657278637,
+          0.7541217526837009
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 0.0203,
+      "initial_type": "previous_pwa_cycle",
+      "initial": [
+        0.02016859334848455,
+        0.7677889466713138,
+        0.3282223487383425
+      ],
+      "reference": {
+        "period": 154.1850092251766,
+        "Cmin": 0.029343774728128665,
+        "Cmax": 0.8744884300796941,
+        "Imin": 0.15659064149673388,
+        "Imax": 0.5368781338361303
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.0015238517685596425,
+        "min_I_solver_nodes": 0.05150767057575413,
+        "min_h_solver_nodes": 0.6473020969269188,
+        "max_h_solver_nodes": 0.9003695737237501,
+        "t_end": 1600.0,
+        "end": [
+          0.041037216433590706,
+          0.8862209395053906,
+          0.8586314337501859
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 0.021,
+      "initial_type": "reference_peak",
+      "initial": [
+        0.875269999756655,
+        0.7983642016491553,
+        0.31274787762508954
+      ],
+      "reference": {
+        "period": 88.69438831748494,
+        "Cmin": 0.029354789367498333,
+        "Cmax": 0.8752699998112965,
+        "Imin": 0.15027719481358268,
+        "Imax": 0.5360134287576979
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.0016100013619743745,
+        "min_I_solver_nodes": 0.03615981944883222,
+        "min_h_solver_nodes": 0.6455755594128568,
+        "max_h_solver_nodes": 0.899909980509125,
+        "t_end": 1600.0,
+        "end": [
+          0.4763063849843439,
+          0.658284134794084,
+          0.05969970720815155
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 0.021,
+      "initial_type": "previous_pwa_cycle",
+      "initial": [
+        0.02016859334848455,
+        0.7677889466713138,
+        0.3282223487383425
+      ],
+      "reference": {
+        "period": 88.69438831748494,
+        "Cmin": 0.029354789367498333,
+        "Cmax": 0.8752699998112965,
+        "Imin": 0.15027719481358268,
+        "Imax": 0.5360134287576979
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.0014909794148166696,
+        "min_I_solver_nodes": 0.05964856635269363,
+        "min_h_solver_nodes": 0.6466027847499907,
+        "max_h_solver_nodes": 0.8999100517735485,
+        "t_end": 1600.0,
+        "end": [
+          0.023794627846868106,
+          0.7893263211574647,
+          0.42689158524809634
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    }
+  ],
+  "scope": "Finite adaptive integrations from two initial states; detection or non-detection does not prove absence of other cycles or physical invariance."
+}

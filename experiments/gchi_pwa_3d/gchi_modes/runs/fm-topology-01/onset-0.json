@@ -1,0 +1,134 @@
+{
+  "duration": 1600,
+  "records": [
+    {
+      "gamma": 0.0203,
+      "initial_type": "reference_peak",
+      "initial": [
+        0.8744884300010956,
+        0.7963882227825149,
+        0.31509475514339613
+      ],
+      "reference": {
+        "period": 154.1850092251766,
+        "Cmin": 0.029343774728128665,
+        "Cmax": 0.8744884300796941,
+        "Imin": 0.15659064149673388,
+        "Imax": 0.5368781338361303
+      },
+      "candidate": {
+        "status": "negative_ip3",
+        "min_C_solver_nodes": 0.0002830101711621357,
+        "min_I_solver_nodes": -0.020206901582834384,
+        "min_h_solver_nodes": 0.6445921074228388,
+        "max_h_solver_nodes": 0.8993652534037481,
+        "t_end": 1600.0,
+        "end": [
+          0.03125561728447232,
+          0.8303404263696793,
+          0.5976899255725079
+        ],
+        "physical_violations": [
+          "negative_ip3"
+        ]
+      }
+    },
+    {
+      "gamma": 0.0203,
+      "initial_type": "previous_pwa_cycle",
+      "initial": [
+        0.02016859334848455,
+        0.7677889466713138,
+        0.3282223487383425
+      ],
+      "reference": {
+        "period": 154.1850092251766,
+        "Cmin": 0.029343774728128665,
+        "Cmax": 0.8744884300796941,
+        "Imin": 0.15659064149673388,
+        "Imax": 0.5368781338361303
+      },
+      "candidate": {
+        "status": "negative_ip3",
+        "min_C_solver_nodes": 0.00028302441326412246,
+        "min_I_solver_nodes": -0.02021752888269793,
+        "min_h_solver_nodes": 0.644591930523713,
+        "max_h_solver_nodes": 0.8993652566135983,
+        "t_end": 1600.0,
+        "end": [
+          0.03874154260090768,
+          0.8733304341884962,
+          0.7205856202715882
+        ],
+        "physical_violations": [
+          "negative_ip3"
+        ]
+      }
+    },
+    {
+      "gamma": 0.021,
+      "initial_type": "reference_peak",
+      "initial": [
+        0.875269999756655,
+        0.7983642016491553,
+        0.31274787762508954
+      ],
+      "reference": {
+        "period": 88.69438831748494,
+        "Cmin": 0.029354789367498333,
+        "Cmax": 0.8752699998112965,
+        "Imin": 0.15027719481358268,
+        "Imax": 0.5360134287576979
+      },
+      "candidate": {
+        "status": "negative_ip3",
+        "min_C_solver_nodes": 0.0002846148380840363,
+        "min_I_solver_nodes": -0.014265306753752243,
+        "min_h_solver_nodes": 0.6438048469838947,
+        "max_h_solver_nodes": 0.8989540097315838,
+        "t_end": 1600.0,
+        "end": [
+          0.7882169173330303,
+          0.8327517508305471,
+          0.35335827754725113
+        ],
+        "physical_violations": [
+          "negative_ip3"
+        ]
+      }
+    },
+    {
+      "gamma": 0.021,
+      "initial_type": "previous_pwa_cycle",
+      "initial": [
+        0.02016859334848455,
+        0.7677889466713138,
+        0.3282223487383425
+      ],
+      "reference": {
+        "period": 88.69438831748494,
+        "Cmin": 0.029354789367498333,
+        "Cmax": 0.8752699998112965,
+        "Imin": 0.15027719481358268,
+        "Imax": 0.5360134287576979
+      },
+      "candidate": {
+        "status": "negative_ip3",
+        "min_C_solver_nodes": 0.0003098852585253556,
+        "min_I_solver_nodes": -0.014252219506150235,
+        "min_h_solver_nodes": 0.6438051770757298,
+        "max_h_solver_nodes": 0.8989543969449253,
+        "t_end": 1600.0,
+        "end": [
+          0.01905039614337077,
+          0.759338836577815,
+          0.40209273467209206
+        ],
+        "physical_violations": [
+          "negative_ip3"
+        ]
+      }
+    }
+  ],
+  "scope": "Finite adaptive integrations from two initial states; detection or non-detection does not prove absence of other cycles or physical invariance."
+}

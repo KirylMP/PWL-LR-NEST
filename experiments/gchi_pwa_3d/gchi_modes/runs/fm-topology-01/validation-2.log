@@ -1,0 +1,13 @@
+FM 0.02336 negative_calcium
+FM 0.03664 negative_calcium
+FM 0.07199 negative_calcium
+FM 0.11292 negative_calcium
+FM 0.22183 negative_calcium
+FM 0.43578 cycle
+FM 0.85609 cycle
+FM 1.68179 cycle
+FM 2.63799 cycle
+FM 5.18234 cycle
+FM 10.18071 cycle
+FM 20.0 cycle
+SUMMARY 7 12 {'Cmin': 0.027872669630647367, 'Cmax': 0.034807577736396915, 'Imin': 0.3533574598170189, 'Imax': 0.6544933543228412, 'period': 0.5104664047932245}

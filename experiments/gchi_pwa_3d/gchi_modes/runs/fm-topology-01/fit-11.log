@@ -1,0 +1,12 @@
+calls 1 cost 64.48101 feasible True best 64.48101 elapsed 0.7
+calls 76 cost 55.77195 feasible True best 55.6426 elapsed 53.9
+calls 151 cost 3707322127.60113 feasible False best 55.6426 elapsed 107.8
+calls 226 cost 135953677481.37776 feasible False best 55.6426 elapsed 162.9
+calls 301 cost 135818985060.63565 feasible False best 55.6426 elapsed 217.7
+calls 376 cost 135765146981.09308 feasible False best 55.6426 elapsed 270.1
+Positive directional derivative for linesearch    (Exit mode 8)
+            Current function value: 135765146981.09308
+            Iterations: 16
+            Function evaluations: 397
+            Gradient evaluations: 12
+DONE 55.64260251937824 [-0.06526434010406787, -0.001026935148566683, 2.3911308248796637, -0.2841146078033316] Positive directional derivative for linesearch

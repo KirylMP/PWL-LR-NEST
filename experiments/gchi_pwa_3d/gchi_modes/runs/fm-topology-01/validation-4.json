@@ -1,0 +1,435 @@
+{
+  "zone_eigenvalues": [
+    {
+      "C_sample": 0.020629292615384952,
+      "eigenvalues": [
+        [
+          -27.077967588196508,
+          0.0
+        ],
+        [
+          -0.4002146495688524,
+          0.0
+        ],
+        [
+          -0.13379477761031897,
+          0.0
+        ]
+      ],
+      "max_real": -0.13379477761031897
+    },
+    {
+      "C_sample": 0.047557342355415116,
+      "eigenvalues": [
+        [
+          -6.636186130216808,
+          0.0
+        ],
+        [
+          -0.3955644661533884,
+          0.0
+        ],
+        [
+          -0.13686266674344147,
+          0.0
+        ]
+      ],
+      "max_real": -0.13686266674344147
+    },
+    {
+      "C_sample": 0.2389971876984544,
+      "eigenvalues": [
+        [
+          2.7783483512831597,
+          0.0
+        ],
+        [
+          0.12841444061623222,
+          0.0
+        ],
+        [
+          -0.39983537089034044,
+          0.0
+        ]
+      ],
+      "max_real": 2.7783483512831597
+    },
+    {
+      "C_sample": 0.4741382759168485,
+      "eigenvalues": [
+        [
+          -0.3821054514740838,
+          1.1645857570264047
+        ],
+        [
+          -0.3821054514740838,
+          -1.1645857570264047
+        ],
+        [
+          -0.40021746673662867,
+          0.0
+        ]
+      ],
+      "max_real": -0.3821054514740838
+    }
+  ],
+  "mode": "FM",
+  "duration": 1000,
+  "detected_cycles": 0,
+  "total": 12,
+  "conditional_MAE": {
+    "Cmin": null,
+    "Cmax": null,
+    "Imin": null,
+    "Imax": null,
+    "period": null
+  },
+  "equilibria_at_zero": [
+    {
+      "state": [
+        0.028661070981479464,
+        0.8794141767490402,
+        0.07240688915013724
+      ],
+      "ref_max_real": -0.045530296894052254,
+      "pwa_max_real": -0.1337947775065874,
+      "residual": 9.486764796347358e-16
+    },
+    {
+      "state": [
+        0.14136628952958197,
+        0.7612141334927249,
+        0.48262752303350676
+      ],
+      "ref_max_real": 2.8000192284644494,
+      "pwa_max_real": 2.77834835225323,
+      "residual": 0.7648041580030557
+    },
+    {
+      "state": [
+        0.1944000237592009,
+        0.7038348679733822,
+        0.5101655465229655
+      ],
+      "ref_max_real": 1.6508102002226488,
+      "pwa_max_real": 2.7783483615747,
+      "residual": 0.9044402175618633
+    }
+  ],
+  "records": [
+    {
+      "gamma": 0.023361974420339836,
+      "reference": {
+        "Cmin": 0.029326587624312558,
+        "Cmax": 0.8795387574835317,
+        "Imin": 0.14802971048799532,
+        "Imax": 0.5331748071636633,
+        "period": 56.47365698885994
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.011552729172036482,
+        "min_I_solver_nodes": -0.022896727345685642,
+        "min_h_solver_nodes": 0.6064814925776583,
+        "max_h_solver_nodes": 0.8938594721062846,
+        "t_end": 1000.0,
+        "end": [
+          0.051907321802825875,
+          0.8897706728150195,
+          0.6481447896365468
+        ],
+        "physical_violations": [
+          "negative_calcium",
+          "negative_ip3"
+        ]
+      }
+    },
+    {
+      "gamma": 0.03664467780188155,
+      "reference": {
+        "Cmin": 0.02936584879542243,
+        "Cmax": 0.9040955212221563,
+        "Imin": 0.1508679728425446,
+        "Imax": 0.578473751454708,
+        "period": 32.16471477133257
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.011346318639269482,
+        "min_I_solver_nodes": 0.004170040064128053,
+        "min_h_solver_nodes": 0.5954617068725497,
+        "max_h_solver_nodes": 0.8834338128036074,
+        "t_end": 1000.0,
+        "end": [
+          0.41823438605063573,
+          0.8707344015139293,
+          0.6497227075462727
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 0.07198847153274834,
+      "reference": {
+        "Cmin": 0.029447537039657336,
+        "Cmax": 0.9434597579823175,
+        "Imin": 0.1624660018331094,
+        "Imax": 0.6989148242178965,
+        "period": 22.070946860586332
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.01084877346795354,
+        "min_I_solver_nodes": 0.06930341079291695,
+        "min_h_solver_nodes": 0.5798242850105553,
+        "max_h_solver_nodes": 0.8693389374014614,
+        "t_end": 1000.0,
+        "end": [
+          0.027900721230464758,
+          0.783563135543623,
+          0.6964404849456048
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 0.11291829608677019,
+      "reference": {
+        "Cmin": 0.029518444899671994,
+        "Cmax": 0.9704221445183928,
+        "Imin": 0.17427262376726918,
+        "Imax": 0.8058190425337434,
+        "period": 18.723823290634527
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.010422518744915106,
+        "min_I_solver_nodes": 0.11647181709762215,
+        "min_h_solver_nodes": 0.569915782326485,
+        "max_h_solver_nodes": 0.8606087381673893,
+        "t_end": 1000.0,
+        "end": [
+          0.008913250908755091,
+          0.6818263920992838,
+          0.48654337946790865
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 0.22182799879745482,
+      "reference": {
+        "Cmin": 0.02967632799593694,
+        "Cmax": 1.0103967975241899,
+        "Imin": 0.19899313441005018,
+        "Imax": 1.0083217627244452,
+        "period": 15.669259144987222
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.00972228898741236,
+        "min_I_solver_nodes": 0.1968898172980781,
+        "min_h_solver_nodes": 0.5553559590288856,
+        "max_h_solver_nodes": 0.8479837492705208,
+        "t_end": 1000.0,
+        "end": [
+          0.035609173586475,
+          0.7946287528957696,
+          0.8763933890966047
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 0.4357811156897981,
+      "reference": {
+        "Cmin": 0.029888984243033486,
+        "Cmax": 1.0473913788866902,
+        "Imin": 0.23577271234145833,
+        "Imax": 1.266013994821338,
+        "period": 13.87896409698817
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.009205031628946564,
+        "min_I_solver_nodes": 0.267064959277323,
+        "min_h_solver_nodes": 0.5382863972685211,
+        "max_h_solver_nodes": 0.8347961525363718,
+        "t_end": 1000.0,
+        "end": [
+          1.0100569394300754,
+          0.7388741324894986,
+          0.6731695864965704
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 0.8560920254491522,
+      "reference": {
+        "Cmin": 0.0301552351063498,
+        "Cmax": 1.0789687930942962,
+        "Imin": 0.28962278603717756,
+        "Imax": 1.5745278980443973,
+        "period": 12.810319884026399
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.009038534025459568,
+        "min_I_solver_nodes": 0.39201413456013856,
+        "min_h_solver_nodes": 0.5195976625617137,
+        "max_h_solver_nodes": 0.8198157000712177,
+        "t_end": 1000.0,
+        "end": [
+          0.03094204036080734,
+          0.7394729965171359,
+          1.0014444442653827
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 1.6817928305074292,
+      "reference": {
+        "Cmin": 0.0304838023567341,
+        "Cmax": 1.1038882020965064,
+        "Imin": 0.365155460496126,
+        "Imax": 1.9194490275281963,
+        "period": 12.1939392938948
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.00925200624444497,
+        "min_I_solver_nodes": 0.6067221550828238,
+        "min_h_solver_nodes": 0.499091613736884,
+        "max_h_solver_nodes": 0.802604931064358,
+        "t_end": 1000.0,
+        "end": [
+          0.6560931589354245,
+          0.5165933728743318,
+          0.6067443883978484
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 2.637994344767486,
+      "reference": {
+        "Cmin": 0.03074071590697029,
+        "Cmax": 1.1168594489175607,
+        "Imin": 0.4294669356568153,
+        "Imax": 2.15742530877692,
+        "period": 11.955956946545712
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.00968869546810552,
+        "min_I_solver_nodes": 0.7967935934051174,
+        "min_h_solver_nodes": 0.484784434942168,
+        "max_h_solver_nodes": 0.7901570061688932,
+        "t_end": 1000.0,
+        "end": [
+          0.49313413097151293,
+          0.49448467514940414,
+          0.8186304823971627
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 5.182340033621318,
+      "reference": {
+        "Cmin": 0.031219577531247954,
+        "Cmax": 1.1316518160727285,
+        "Imin": 0.5464575342371382,
+        "Imax": 2.506784730333689,
+        "period": 11.788329232101205
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.010674211962331715,
+        "min_I_solver_nodes": 1.1176540629266625,
+        "min_h_solver_nodes": 0.4632810057713279,
+        "max_h_solver_nodes": 0.7712433445587334,
+        "t_end": 1000.0,
+        "end": [
+          -0.006012230279537336,
+          0.5118029327838955,
+          1.3107253374213848
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 10.180707277612223,
+      "reference": {
+        "Cmin": 0.031883157294375596,
+        "Cmax": 1.1421276358007355,
+        "Imin": 0.6833232507918949,
+        "Imax": 2.8344394534862674,
+        "period": 11.811618950293564
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.01183866051788715,
+        "min_I_solver_nodes": 1.3997347183331776,
+        "min_h_solver_nodes": 0.44346456068764906,
+        "max_h_solver_nodes": 0.753776801038571,
+        "t_end": 1000.0,
+        "end": [
+          0.0818164568363884,
+          0.7498095021438819,
+          2.208488857538917
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 20.0,
+      "reference": {
+        "Cmin": 0.03360435982500373,
+        "Cmax": 1.150064669196905,
+        "Imin": 0.8367366922834513,
+        "Imax": 3.1648099518471904,
+        "period": 12.16727770600096
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -0.0129639855497401,
+        "min_I_solver_nodes": 1.6720253472582989,
+        "min_h_solver_nodes": 0.42600778167998493,
+        "max_h_solver_nodes": 0.739145529387705,
+        "t_end": 1000.0,
+        "end": [
+          0.8597937331708906,
+          0.4916649928962098,
+          1.7875619750853147
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    }
+  ],
+  "scope": "Each gamma starts from reference cycle state, not a basin or unstable-orbit search; C, IP3 and h checked on solver nodes and sampled orbit; these checks do not prove invariance between samples; only untrained gamma values unless candidate has no training list."
+}

@@ -1,0 +1,5 @@
+calls 1 cost 65.67532 feasible True best 65.67532 elapsed 0.8
+calls 76 cost 47.94555 feasible True best 47.81881 elapsed 56.6
+calls 151 cost 59.67621 feasible True best 42.51925 elapsed 111.5
+calls 226 cost 102.65323 feasible True best 42.51925 elapsed 166.0
+calls 301 cost 1420.68992 feasible False best 42.51925 elapsed 219.7

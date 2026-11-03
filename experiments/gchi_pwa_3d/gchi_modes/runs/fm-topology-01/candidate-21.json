@@ -1,0 +1,144 @@
+{
+  "mode": "FM",
+  "knots": [
+    0.041258585230769904,
+    0.053856099480060336,
+    0.4241382759168485
+  ],
+  "coefficients": [
+    [
+      -3.899878235782837,
+      0.1193599855710375,
+      -0.06555580736343262
+    ],
+    [
+      -27.22107575793805,
+      -0.02817102831426059,
+      4.910375421685348
+    ],
+    [
+      5.327500340989939,
+      -0.13589965593030037,
+      -0.06598492632977475
+    ],
+    [
+      -0.0692738810828876,
+      0.013251643908249173,
+      -0.23689363924324314
+    ],
+    [
+      0.6034474152449738,
+      -0.02460187198471435,
+      0.33601705257409364
+    ],
+    [
+      0.6088014397518466,
+      0.0844724834371476,
+      -0.6764904109546349
+    ],
+    [
+      0.15375794302232865,
+      -0.10179088015210125,
+      1.1822737764486753
+    ],
+    [
+      20.330043777694765,
+      0.34029807559954545,
+      -12.017226945136214
+    ],
+    [
+      9.657026216208807,
+      -0.4505562601808675,
+      6.896575984207561
+    ],
+    [
+      -3.7371863983478892,
+      0.022111718064610215,
+      -0.3888585485227794
+    ]
+  ],
+  "fixed_equilibria": [
+    {
+      "gamma": 0.0,
+      "state": [
+        0.028661070981479464,
+        0.8794141767490402,
+        0.07240688915013724
+      ]
+    },
+    {
+      "gamma": 0.020152517072605552,
+      "state": [
+        0.053856099480060336,
+        0.897542541891792,
+        0.5348363348718702
+      ]
+    },
+    {
+      "gamma": 1.3118429940002694,
+      "state": [
+        0.4241382759168485,
+        0.585696479897174,
+        0.9552563474219247
+      ]
+    }
+  ],
+  "max_anchor_residual": 3.3127066674770607e-15,
+  "training_gammas": [
+    0.029259050316938727,
+    0.05747940593730762,
+    0.1414213562373095,
+    0.27782226201179716,
+    0.6835491850677583,
+    1.3428324112037102,
+    3.303882106905794,
+    6.490476578520554,
+    15.969058576597119,
+    0.021,
+    0.0203
+  ],
+  "fold_proxy": {
+    "gamma": 21.202553865109465,
+    "state": [
+      1.1415520999327236,
+      0.687607265172311,
+      2.2311568583177754
+    ],
+    "period": 12.389971366567478,
+    "method": "fixed-step one-period shooting; finite-difference monodromy; soft penalty only"
+  },
+  "onset_probe_gammas": [
+    0.021,
+    0.0203
+  ],
+  "objective": 51.73754962422025,
+  "calls": 561,
+  "seed": 21,
+  "fit_signature": "107da76aa5bea4e6fa0e1e5f6578f3d4e474b6f4fd1bcd490bb7e9d8d9f74278",
+  "resumed": false,
+  "start_perturbed": true,
+  "status": "Optimization terminated successfully",
+  "optimizer_success": true,
+  "lower_zone_leading_eigenvalues": [
+    -0.0734608626285277,
+    -0.02842568608796403
+  ],
+  "all_zone_leading_eigenvalues": [
+    -0.0734608626285277,
+    -0.02842568608796403,
+    2.4881634138027713,
+    -0.34306546838716623
+  ],
+  "max_step": 0.03497845036868798,
+  "substeps_per_segment": 551,
+  "full_period_probes": true,
+  "full_probe_gammas": [
+    0.029259050316938727,
+    0.05747940593730762,
+    0.27782226201179716,
+    3.303882106905794,
+    15.969058576597119
+  ],
+  "stability_constraint": "max real eigenvalue <= -0.001 in both lower cells and upper cell, >= 0.001 in middle cell; numerically checked to tolerance 1e-7",
+  "limitations": "Finite-step clipped trajectory/fold proxy, all orbit and physical penalties soft; no guarantee of a fold or its nondegeneracy, long-period cycle, global positivity, HLB subtype or branch matching. Independent adaptive validation and numerical continuation are essential."
+}

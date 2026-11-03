@@ -1,0 +1,42 @@
+{
+  "candidate": "/media/disk1/kizemin/Users/lab_b/Documents/mikholap/PWL-LR-NEST/experiments/gchi_pwa_3d/gchi_modes/runs/fm-topology-01/candidate-0.json",
+  "events": [
+    {
+      "threshold_index": 0,
+      "C_threshold": 0.041258585230769904,
+      "gamma": 0.013267193714665622,
+      "state": [
+        0.0412585852307699,
+        0.8985306963133698,
+        0.6963676051986203
+      ],
+      "max_real_below_C": -0.0882995607665965,
+      "max_real_above_C": -0.09614568833691446
+    },
+    {
+      "threshold_index": 1,
+      "C_threshold": 0.053856099480060336,
+      "gamma": 0.020152517072605305,
+      "state": [
+        0.05385609948006042,
+        0.8975425418917916,
+        0.5348363348718668
+      ],
+      "max_real_below_C": -0.09614568833691446,
+      "max_real_above_C": 2.4202183183996655
+    },
+    {
+      "threshold_index": 2,
+      "C_threshold": 0.4241382759168485,
+      "gamma": 1.3118429940002767,
+      "state": [
+        0.4241382759168483,
+        0.5856964798971745,
+        0.9552563474219355
+      ],
+      "max_real_below_C": 2.4202183183996655,
+      "max_real_above_C": -0.5181114806534921
+    }
+  ],
+  "scope": "Intersection search on sampled gamma grid; may miss closely spaced or tangential roots. Eigenvalues describe affine cells, not verified attractor basins or local HLB type."
+}

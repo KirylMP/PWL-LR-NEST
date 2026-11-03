@@ -1,0 +1,19 @@
+calls 1 cost 60.31058 feasible True best 60.31058 elapsed 0.7
+calls 76 cost 55.60107 feasible True best 55.5282 elapsed 56.2
+calls 151 cost 57.42733 feasible True best 55.5282 elapsed 113.1
+calls 226 cost 55.83587 feasible True best 55.5282 elapsed 170.0
+calls 301 cost 54.60208 feasible True best 54.60208 elapsed 228.2
+calls 376 cost 54.28163 feasible True best 54.25666 elapsed 285.7
+calls 451 cost 37.14976 feasible True best 37.1111 elapsed 340.7
+calls 526 cost 34.65992 feasible True best 34.60239 elapsed 394.0
+calls 601 cost 34.03813 feasible True best 33.96882 elapsed 448.3
+calls 676 cost 30.40447 feasible True best 30.39784 elapsed 501.4
+calls 751 cost 30.36325 feasible True best 30.36167 elapsed 554.8
+calls 826 cost 12324977.62309 feasible False best 30.36167 elapsed 607.9
+calls 901 cost 107.22213 feasible True best 30.36167 elapsed 660.8
+Iteration limit reached    (Exit mode 9)
+            Current function value: 103.33978182111686
+            Iterations: 30
+            Function evaluations: 953
+            Gradient evaluations: 30
+DONE 30.36166785868564 [-0.09408617979592893, -0.10204250413037727, 2.378964678311541, -0.37022204332495673] Iteration limit reached
