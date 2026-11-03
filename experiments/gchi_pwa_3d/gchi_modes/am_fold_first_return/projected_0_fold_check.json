@@ -1,0 +1,111 @@
+{
+  "gamma": 3.7500176522854862,
+  "section_state": [
+    0.6267108013218423,
+    0.803866782107891
+  ],
+  "P_eigenvalues": [
+    [
+      1.000000000002464,
+      0.0
+    ],
+    [
+      0.4701542098523077,
+      0.0
+    ]
+  ],
+  "right_eigenvector": [
+    0.9898793777295835,
+    0.14191130168416025
+  ],
+  "left_eigenvector": [
+    0.9863401182110627,
+    0.16659883515217094
+  ],
+  "normal_form_estimates": [
+    {
+      "step": 0.0002,
+      "state_second_derivative": -3.48280505837304e-05,
+      "parameter_derivative": 0.00014129190146451167,
+      "route_unchanged": true
+    },
+    {
+      "step": 0.0001,
+      "state_second_derivative": -8.870388820115458e-06,
+      "parameter_derivative": 0.00014129191426786352,
+      "route_unchanged": true
+    },
+    {
+      "step": 5e-05,
+      "state_second_derivative": -2.6484848396726063e-06,
+      "parameter_derivative": 0.00014129191238881783,
+      "route_unchanged": true
+    }
+  ],
+  "predicted_two_orbit_side": 1,
+  "branches": [
+    {
+      "gamma": 3.751017652285486,
+      "initial_sign": -1,
+      "error": "initial section crossing not positive transverse"
+    },
+    {
+      "gamma": 3.751017652285486,
+      "initial_sign": 1,
+      "section_state": [
+        0.6487131822179126,
+        0.8039479110061203
+      ],
+      "closure": 1.1583225817372844e-07,
+      "return_time": 5.62478843933777,
+      "P_eigenvalues": [
+        [
+          0.9999992991125415,
+          0.0
+        ],
+        [
+          0.4701532506243751,
+          0.0
+        ]
+      ],
+      "spectral_radius": 0.9999992991125415,
+      "min_C_nodes": 0.19700864713619817,
+      "min_I_nodes": 0.5865731806643998,
+      "min_h_nodes": 0.5537604159044835,
+      "max_h_nodes": 0.6623104562485425,
+      "switches": [
+        {
+          "threshold_index": 2,
+          "time": 0.6166133653134751,
+          "speed": 0.20392484965402247
+        },
+        {
+          "threshold_index": 2,
+          "time": 3.525931887928866,
+          "speed": -0.20167500002872588
+        }
+      ]
+    },
+    {
+      "gamma": 3.760017652285486,
+      "initial_sign": -1,
+      "error": "initial section crossing not positive transverse"
+    },
+    {
+      "gamma": 3.760017652285486,
+      "initial_sign": 1,
+      "error": "domain guard hit"
+    },
+    {
+      "gamma": 3.800017652285486,
+      "initial_sign": -1,
+      "error": "initial section crossing not positive transverse"
+    },
+    {
+      "gamma": 3.800017652285486,
+      "initial_sign": 1,
+      "error": "domain guard hit"
+    }
+  ],
+  "note": "Finite-difference numerical evidence only; step sensitivity, Poincare section, near-grazing, first-return branch and physical domain require independent checks. Not a formal proof."
+}
