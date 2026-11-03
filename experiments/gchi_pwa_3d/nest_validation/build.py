@@ -78,7 +78,7 @@ def nest_flags(extra_include=None):
     return includes, libs
 
 
-def build_source(case, path, out, reference=False):
+def build_source(case, path, out, reference=False, analytic=False):
     raw = path.read_bytes()
     d = json.loads(raw)
     co = np.asarray(d['coefficients'], dtype=float)
@@ -87,7 +87,7 @@ def build_source(case, path, out, reference=False):
         raise ValueError(f'{path}: unexpected model, basis or coefficient dimensions')
     if not np.all(np.isfinite(co)) or not np.all(np.isfinite(knots)) or not np.all(np.diff(knots) > 0):
         raise ValueError(f'{path}: invalid coefficients or knots')
-    name = 'gchi_' + case + ('_reference' if reference else '_pwa')
+    name = 'gchi_' + case + ('_reference' if reference else '_analytic' if analytic else '_pwa')
     literal = lambda a: ','.join(format(float(x), '.17g') for x in np.ravel(a))
     for ext in ('h', 'cpp'):
         src = (UPSTREAM / f'astrocyte_lr_1994.{ext}').read_text()
@@ -136,6 +136,17 @@ def build_source(case, path, out, reference=False):
                 raise RuntimeError('Upstream template changed')
             src = src.replace(clamp, '    // No state clipping: physical violations remain observable.')
             src = src.replace(spike, '    // No spike-driven IP3 in this fixed-glutamate experiment.')
+            if analytic:
+                src = src.replace('#include "' + name + '.h"', '#include "' + name + '.h"\nextern "C" int gchi_analytic_step(const double*,const double*,double,double,double*);')
+                begin = src.index('    double t = 0.0;', src.index('nest::' + name + '::update('))
+                end = src.index('    // keep calcium within limits', begin)
+                replacement = '''    double state[3] = {S_.y_[State_::Ca_astro], S_.y_[State_::h_IP3R], S_.y_[State_::IP3]};
+    const int status = gchi_analytic_step(&CO[0][0], KNOTS, P_.IP3_0_, B_.step_ / 1000., state);
+    if (status != 0) throw KernelException("G-ChI analytic propagation failed");
+    S_.y_[State_::Ca_astro]=state[0]; S_.y_[State_::h_IP3R]=state[1]; S_.y_[State_::IP3]=state[2];
+
+'''
+                src = src[:begin] + replacement + src[end:]
             src = src.replace('gsl_odeiv_control_y_new( 1e-3, 0.0 )', 'gsl_odeiv_control_y_new( 1e-10, 1e-9 )')
             src = src.replace('gsl_odeiv_control_init( B_.c_, 1e-3, 0.0, 1.0, 0.0 )', 'gsl_odeiv_control_init( B_.c_, 1e-10, 1e-9, 1.0, 0.0 )')
         (out / f'{name}.{ext}').write_text(src)
@@ -155,13 +166,16 @@ def main():
     manifest = {case: build_source(case, getattr(args, case), out) for case in ('am', 'fm')}
     for case in ('am', 'fm'):
         build_source(case, getattr(args, case), out, reference=True)
+        build_source(case, getattr(args, case), out, analytic=True)
     (out / 'module.cpp').write_text('''#include "nest_extension_interface.h"
 #include <string>
 namespace nest { void register_gchi_am_pwa(const std::string&); void register_gchi_fm_pwa(const std::string&);
-void register_gchi_am_reference(const std::string&); void register_gchi_fm_reference(const std::string&); }
+void register_gchi_am_reference(const std::string&); void register_gchi_fm_reference(const std::string&);
+void register_gchi_am_analytic(const std::string&); void register_gchi_fm_analytic(const std::string&); }
 class GchiModule : public nest::NESTExtensionInterface { public: void initialize() override {
   nest::register_gchi_am_pwa("gchi_am_pwa"); nest::register_gchi_fm_pwa("gchi_fm_pwa");
-  nest::register_gchi_am_reference("gchi_am_reference"); nest::register_gchi_fm_reference("gchi_fm_reference"); } };
+  nest::register_gchi_am_reference("gchi_am_reference"); nest::register_gchi_fm_reference("gchi_fm_reference");
+  nest::register_gchi_am_analytic("gchi_am_analytic"); nest::register_gchi_fm_analytic("gchi_fm_analytic"); } };
 GchiModule gchi_pwa_module_LTX_module;
 ''')
     compiler = compiler_command(args.cxx)
@@ -170,7 +184,8 @@ GchiModule gchi_pwa_module_LTX_module;
     print('NEST _GLIBCXX_USE_CXX11_ABI =', abi, flush=True)
     cmd = (compiler + ['-std=c++17', '-O2', '-shared', '-fPIC']
            + shlex.split(run_config('--cflags')) + ['-U_GLIBCXX_USE_CXX11_ABI', f'-D_GLIBCXX_USE_CXX11_ABI={abi}'] + includes
-           + [str(out / p) for p in ('module.cpp', 'gchi_am_pwa.cpp', 'gchi_fm_pwa.cpp', 'gchi_am_reference.cpp', 'gchi_fm_reference.cpp')]
+           + [str(out / p) for p in ('module.cpp', 'gchi_am_pwa.cpp', 'gchi_fm_pwa.cpp', 'gchi_am_reference.cpp', 'gchi_fm_reference.cpp', 'gchi_am_analytic.cpp', 'gchi_fm_analytic.cpp')]
+           + [str(HERE / 'analytic.cpp')]
            + ['-o', str(out / 'gchi_pwa_module.so')] + libs + ['-lgsl', '-lgslcblas'])
     print(shlex.join(cmd), flush=True)
     subprocess.run(cmd, check=True)
