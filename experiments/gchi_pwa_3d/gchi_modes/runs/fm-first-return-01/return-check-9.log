@@ -1,0 +1,68 @@
+{
+  "gamma": 21.202553865109465,
+  "section_C": 0.2,
+  "section_state": [
+    0.7694818218383364,
+    2.629034145839045
+  ],
+  "anchor_residual": 6.2491941627450586e-15,
+  "closure": 1.746077971900314e-10,
+  "fold_determinant": 1.7988826837365068e-09,
+  "return_time": 11.069122436416501,
+  "return_map_eigenvalues": [
+    [
+      -3.4276035343339117e-09,
+      0.0
+    ],
+    [
+      0.9999999982011173,
+      0.0
+    ]
+  ],
+  "exact_vs_adaptive_DP": 8.388234995493349e-09,
+  "exact_vs_adaptive_return": 1.3677947663381929e-13,
+  "min_C_nodes": 0.017705858161982054,
+  "min_I_nodes": 2.627712205090902,
+  "min_h_nodes": 0.5654157882560452,
+  "max_h_nodes": 0.7702407014770712,
+  "switches": [
+    {
+      "threshold_index": 2,
+      "time": 0.28197422261823024,
+      "speed": 1.1251039306372315
+    },
+    {
+      "threshold_index": 2,
+      "time": 4.911683878663438,
+      "speed": -0.018289233772589064
+    },
+    {
+      "threshold_index": 1,
+      "time": 7.206487026397558,
+      "speed": -0.7869234168303119
+    },
+    {
+      "threshold_index": 0,
+      "time": 7.223600323747544,
+      "speed": -0.6874857726442032
+    },
+    {
+      "threshold_index": 0,
+      "time": 9.840197403056383,
+      "speed": 0.007838135802208768
+    },
+    {
+      "threshold_index": 1,
+      "time": 10.382724974225816,
+      "speed": 0.0277949714527278
+    }
+  ],
+  "physical_at_checked_nodes": true,
+  "region_max_real_eig": [
+    -0.02784199481725446,
+    -0.010369414073501388,
+    2.3275434228533594,
+    -0.04520753099168491
+  ],
+  "scope": "Finite sampled numerical checks; no global positivity, nondegeneracy, transversality or exhaustive orbit-branch proof."
+}

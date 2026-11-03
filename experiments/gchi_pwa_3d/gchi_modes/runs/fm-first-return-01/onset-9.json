@@ -1,0 +1,140 @@
+{
+  "duration": 1600,
+  "records": [
+    {
+      "gamma": 0.0203,
+      "initial_type": "reference_peak",
+      "initial": [
+        0.8744884300010956,
+        0.7963882227825149,
+        0.31509475514339613
+      ],
+      "reference": {
+        "period": 154.1850092251766,
+        "Cmin": 0.029343774728128665,
+        "Cmax": 0.8744884300796941,
+        "Imin": 0.15659064149673388,
+        "Imax": 0.5368781338361303
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -7.079583593590451e-05,
+        "min_I_solver_nodes": 0.31509475514339613,
+        "min_h_solver_nodes": 0.6687221320616638,
+        "max_h_solver_nodes": 0.9127954129240552,
+        "t_end": 1600.0,
+        "end": [
+          0.05359613088082515,
+          0.9120499658714051,
+          1.3280484968557138
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 0.0203,
+      "initial_type": "previous_pwa_cycle",
+      "initial": [
+        0.02016859334848455,
+        0.7677889466713138,
+        0.3282223487383425
+      ],
+      "reference": {
+        "period": 154.1850092251766,
+        "Cmin": 0.029343774728128665,
+        "Cmax": 0.8744884300796941,
+        "Imin": 0.15659064149673388,
+        "Imax": 0.5368781338361303
+      },
+      "candidate": {
+        "status": "cycle",
+        "min_C_solver_nodes": 0.001463315533341996,
+        "min_I_solver_nodes": 0.24840683310918138,
+        "min_h_solver_nodes": 0.697570007775321,
+        "max_h_solver_nodes": 0.912795633030564,
+        "t_end": 1600.0,
+        "end": [
+          0.3942283195175788,
+          0.7030002183973576,
+          2.3624884661652055
+        ],
+        "Cmin": 0.0017912263896232316,
+        "Cmax": 0.7755376443197045,
+        "Imin": 1.286251844759005,
+        "Imax": 2.3947800979633223,
+        "period": 34.539891052217854,
+        "closure": 3.905782924790209e-06
+      }
+    },
+    {
+      "gamma": 0.021,
+      "initial_type": "reference_peak",
+      "initial": [
+        0.875269999756655,
+        0.7983642016491553,
+        0.31274787762508954
+      ],
+      "reference": {
+        "period": 88.69438831748494,
+        "Cmin": 0.029354789367498333,
+        "Cmax": 0.8752699998112965,
+        "Imin": 0.15027719481358268,
+        "Imax": 0.5360134287576979
+      },
+      "candidate": {
+        "status": "negative_calcium",
+        "min_C_solver_nodes": -1.8259859473590106e-05,
+        "min_I_solver_nodes": 0.31274787762508954,
+        "min_h_solver_nodes": 0.6681361184199434,
+        "max_h_solver_nodes": 0.9117446106720233,
+        "t_end": 1600.0,
+        "end": [
+          0.04012044883289134,
+          0.8880210124757418,
+          1.3407898373898013
+        ],
+        "physical_violations": [
+          "negative_calcium"
+        ]
+      }
+    },
+    {
+      "gamma": 0.021,
+      "initial_type": "previous_pwa_cycle",
+      "initial": [
+        0.02016859334848455,
+        0.7677889466713138,
+        0.3282223487383425
+      ],
+      "reference": {
+        "period": 88.69438831748494,
+        "Cmin": 0.029354789367498333,
+        "Cmax": 0.8752699998112965,
+        "Imin": 0.15027719481358268,
+        "Imax": 0.5360134287576979
+      },
+      "candidate": {
+        "status": "cycle",
+        "min_C_solver_nodes": 0.001486662258556526,
+        "min_I_solver_nodes": 0.24961217751952616,
+        "min_h_solver_nodes": 0.6962188303221356,
+        "max_h_solver_nodes": 0.9117444396811014,
+        "t_end": 1600.0,
+        "end": [
+          0.04436710488163984,
+          0.9000828090822518,
+          1.4327188668560644
+        ],
+        "Cmin": 0.0016182862963540975,
+        "Cmax": 0.7765336775146485,
+        "Imin": 1.2777724863825883,
+        "Imax": 2.386394642125752,
+        "period": 33.350603919468995,
+        "closure": 1.693524974622488e-05
+      }
+    }
+  ],
+  "scope": "Finite adaptive integrations from two initial states; detection or non-detection does not prove absence of other cycles or physical invariance."
+}

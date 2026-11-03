@@ -1,0 +1,13 @@
+FM 0.02336 cycle
+FM 0.03664 cycle
+FM 0.09016 cycle
+FM 0.17712 negative_ip3
+FM 0.22183 negative_ip3
+FM 0.43578 negative_ip3
+FM 1.07219 negative_ip3
+FM 2.10631 negative_ip3
+FM 2.63799 negative_ip3
+FM 5.18234 negative_ip3
+FM 10.18071 cycle
+FM 20.0 cycle
+SUMMARY 5 12 {'Cmin': 0.02329814195056726, 'Cmax': 0.15070760250565976, 'Imin': 0.7922760903451861, 'Imax': 1.1534233030719718, 'period': 9.492401573082997}

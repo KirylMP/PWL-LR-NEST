@@ -1,0 +1,391 @@
+{
+  "gamma": 21.202553865109465,
+  "section_state": [
+    0.7694818218383364,
+    2.629034145839045
+  ],
+  "P_eigenvalues": [
+    [
+      4.6629367034256575e-15,
+      0.0
+    ],
+    [
+      1.0000000002616718,
+      0.0
+    ]
+  ],
+  "right_eigenvector": [
+    -0.020074797498173924,
+    -0.9997984809477395
+  ],
+  "left_eigenvector": [
+    3.231253173254055,
+    -1.0650813873101581
+  ],
+  "normal_form_estimates": [
+    {
+      "step": 0.0002,
+      "state_second_derivative": -3.703308504385854,
+      "parameter_derivative": -0.019108916191747025,
+      "route_unchanged": true
+    },
+    {
+      "step": 0.0001,
+      "state_second_derivative": -3.703309050382367,
+      "parameter_derivative": -0.019108914798405166,
+      "route_unchanged": true
+    },
+    {
+      "step": 5e-05,
+      "state_second_derivative": -3.7032469409221864,
+      "parameter_derivative": -0.0191089179966827,
+      "route_unchanged": true
+    }
+  ],
+  "predicted_two_orbit_side": -1,
+  "branches": [
+    {
+      "gamma": 21.201553865109464,
+      "initial_sign": -1,
+      "section_state": [
+        0.7695454552447829,
+        2.632171295845081
+      ],
+      "closure": 5.996232229139931e-14,
+      "return_time": 11.082017103960586,
+      "P_eigenvalues": [
+        [
+          2.6423307986078726e-14,
+          0.0
+        ],
+        [
+          1.0121985644845657,
+          0.0
+        ]
+      ],
+      "spectral_radius": 1.0121985644845657,
+      "min_C_nodes": 0.01774312423749295,
+      "min_I_nodes": 2.6308534841212965,
+      "min_h_nodes": 0.5654734579656143,
+      "max_h_nodes": 0.7703058239585111,
+      "switches": [
+        {
+          "threshold_index": 2,
+          "time": 0.2819637875168828,
+          "speed": 1.1251380762443683
+        },
+        {
+          "threshold_index": 2,
+          "time": 4.913464842731773,
+          "speed": -0.01818600207881693
+        },
+        {
+          "threshold_index": 1,
+          "time": 7.223145944331751,
+          "speed": -0.7858780362862873
+        },
+        {
+          "threshold_index": 0,
+          "time": 7.240283686630759,
+          "speed": -0.6864343808422522
+        },
+        {
+          "threshold_index": 0,
+          "time": 9.85323828060385,
+          "speed": 0.007839746887359611
+        },
+        {
+          "threshold_index": 1,
+          "time": 10.39567363748399,
+          "speed": 0.027800309649397947
+        }
+      ]
+    },
+    {
+      "gamma": 21.201553865109464,
+      "initial_sign": 1,
+      "section_state": [
+        0.7694164696404046,
+        2.6257473404251668
+      ],
+      "closure": 6.6650378637527805e-15,
+      "return_time": 11.056401062393956,
+      "P_eigenvalues": [
+        [
+          1.8207657603852567e-14,
+          0.0
+        ],
+        [
+          0.9883924652047175,
+          0.0
+        ]
+      ],
+      "spectral_radius": 0.9883924652047175,
+      "min_C_nodes": 0.017668396544943597,
+      "min_I_nodes": 2.624453477822702,
+      "min_h_nodes": 0.5653580813372909,
+      "max_h_nodes": 0.770175864492454,
+      "switches": [
+        {
+          "threshold_index": 2,
+          "time": 0.28198485486732694,
+          "speed": 1.1250691395030243
+        },
+        {
+          "threshold_index": 2,
+          "time": 4.909871230197555,
+          "speed": -0.018394531029379824
+        },
+        {
+          "threshold_index": 1,
+          "time": 7.190025805890563,
+          "speed": -0.7879576011074941
+        },
+        {
+          "threshold_index": 0,
+          "time": 7.207114988676445,
+          "speed": -0.6885259082901518
+        },
+        {
+          "threshold_index": 0,
+          "time": 9.827327129845765,
+          "speed": 0.00783649635105338
+        },
+        {
+          "threshold_index": 1,
+          "time": 10.36994860037855,
+          "speed": 0.0277895364230476
+        }
+      ]
+    },
+    {
+      "gamma": 21.192553865109463,
+      "initial_sign": -1,
+      "section_state": [
+        0.7696772581869002,
+        2.638447209323277
+      ],
+      "closure": 1.1326038009309237e-13,
+      "return_time": 11.110515500612284,
+      "P_eigenvalues": [
+        [
+          4.418687638008123e-14,
+          0.0
+        ],
+        [
+          1.0407865140293493,
+          0.0
+        ]
+      ],
+      "spectral_radius": 1.0407865140293493,
+      "min_C_nodes": 0.017825787977351012,
+      "min_I_nodes": 2.63710328059062,
+      "min_h_nodes": 0.5655898570092394,
+      "max_h_nodes": 0.7704386006640541,
+      "switches": [
+        {
+          "threshold_index": 2,
+          "time": 0.2819418830327513,
+          "speed": 1.1252097493901883
+        },
+        {
+          "threshold_index": 2,
+          "time": 4.917207229702633,
+          "speed": -0.017969817284497758
+        },
+        {
+          "threshold_index": 1,
+          "time": 7.259875582874957,
+          "speed": -0.7835769456717905
+        },
+        {
+          "threshold_index": 0,
+          "time": 7.277067380412401,
+          "speed": -0.6841200717722109
+        },
+        {
+          "threshold_index": 0,
+          "time": 9.88204383936784,
+          "speed": 0.007843135689936442
+        },
+        {
+          "threshold_index": 1,
+          "time": 10.424285431062525,
+          "speed": 0.02781152847487689
+        }
+      ]
+    },
+    {
+      "gamma": 21.192553865109463,
+      "initial_sign": 1,
+      "section_state": [
+        0.7692691962812661,
+        2.6181242422878372
+      ],
+      "closure": 3.3752423330835636e-14,
+      "return_time": 11.029463661294182,
+      "P_eigenvalues": [
+        [
+          3.7969627442180354e-14,
+          0.0
+        ],
+        [
+          0.9651457291510561,
+          0.0
+        ]
+      ],
+      "spectral_radius": 0.9651457291510561,
+      "min_C_nodes": 0.017589310607045355,
+      "min_I_nodes": 2.6168560795128664,
+      "min_h_nodes": 0.5652248489830635,
+      "max_h_nodes": 0.7700274578326919,
+      "switches": [
+        {
+          "threshold_index": 2,
+          "time": 0.2820085330552018,
+          "speed": 1.1249916581320065
+        },
+        {
+          "threshold_index": 2,
+          "time": 4.905843686258837,
+          "speed": -0.01862930703841803
+        },
+        {
+          "threshold_index": 1,
+          "time": 7.155077246437994,
+          "speed": -0.7901577796165346
+        },
+        {
+          "threshold_index": 0,
+          "time": 7.172115352171129,
+          "speed": -0.6907387652507557
+        },
+        {
+          "threshold_index": 0,
+          "time": 9.800058359729105,
+          "speed": 0.007832852218931041
+        },
+        {
+          "threshold_index": 1,
+          "time": 10.342888763817719,
+          "speed": 0.027777445971921545
+        }
+      ]
+    },
+    {
+      "gamma": 21.152553865109464,
+      "initial_sign": -1,
+      "section_state": [
+        0.7698959234244902,
+        2.648053762432861
+      ],
+      "closure": 3.1264164235997256e-15,
+      "return_time": 11.164326321353554,
+      "P_eigenvalues": [
+        [
+          7.327471962526033e-14,
+          0.0
+        ],
+        [
+          1.1014645413891904,
+          0.0
+        ]
+      ],
+      "spectral_radius": 1.1014645413891904,
+      "min_C_nodes": 0.017980786790992107,
+      "min_I_nodes": 2.6466619136940257,
+      "min_h_nodes": 0.5657787844631458,
+      "max_h_nodes": 0.7706588215737461,
+      "switches": [
+        {
+          "threshold_index": 2,
+          "time": 0.2819044898415521,
+          "speed": 1.125332090412594
+        },
+        {
+          "threshold_index": 2,
+          "time": 4.923594527637744,
+          "speed": -0.01760323248437644
+        },
+        {
+          "threshold_index": 1,
+          "time": 7.328938980679831,
+          "speed": -0.7792605103688898
+        },
+        {
+          "threshold_index": 0,
+          "time": 7.346233102470436,
+          "speed": -0.6797788746040025
+        },
+        {
+          "threshold_index": 0,
+          "time": 9.936379956551583,
+          "speed": 0.007848945293720544
+        },
+        {
+          "threshold_index": 1,
+          "time": 10.478290033211408,
+          "speed": 0.027830727092752916
+        }
+      ]
+    },
+    {
+      "gamma": 21.152553865109464,
+      "initial_sign": 1,
+      "section_state": [
+        0.7689817306334706,
+        2.602523737280493
+      ],
+      "closure": 6.485840811369555e-14,
+      "return_time": 10.982620264027748,
+      "P_eigenvalues": [
+        [
+          4.984901380566953e-14,
+          0.0
+        ],
+        [
+          0.9286924306405284,
+          0.0
+        ]
+      ],
+      "spectral_radius": 0.9286924306405284,
+      "min_C_nodes": 0.017450327129677954,
+      "min_I_nodes": 2.6012929470073143,
+      "min_h_nodes": 0.5649610485186739,
+      "max_h_nodes": 0.7697377265571317,
+      "switches": [
+        {
+          "threshold_index": 2,
+          "time": 0.28205381631747223,
+          "speed": 1.124843480813611
+        },
+        {
+          "threshold_index": 2,
+          "time": 4.898189051649495,
+          "speed": -0.01907854657439767
+        },
+        {
+          "threshold_index": 1,
+          "time": 7.093969205863218,
+          "speed": -0.794022528644614
+        },
+        {
+          "threshold_index": 0,
+          "time": 7.1109183272417145,
+          "speed": -0.6946258540722734
+        },
+        {
+          "threshold_index": 0,
+          "time": 9.752581979813769,
+          "speed": 0.007825906963163931
+        },
+        {
+          "threshold_index": 1,
+          "time": 10.295811377582707,
+          "speed": 0.02775437039111628
+        }
+      ]
+    }
+  ],
+  "note": "Finite-difference numerical evidence only; step sensitivity, Poincare section, near-grazing, first-return branch and physical domain require independent checks. Not a formal proof."
+}

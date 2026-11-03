@@ -1,0 +1,5 @@
+training gammas 0.0203 0.021 0.07198847153274834 0.8560920254491522 outer dimensions 20
+calls 1 cost 43.31458 best 43.31458 feasible True
+`xtol` termination condition is satisfied.
+Function evaluations 16, initial cost 2.1657e+01, final cost 2.1657e+01, first-order optimality 2.65e+04.
+DONE 43.31458077850325 43.29333678828944 `xtol` termination condition is satisfied.
