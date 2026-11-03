@@ -1,0 +1,13 @@
+seed objective max_anchor_residual k fit_status validated cycles/25 below_H1 large-IC
+0 0.169533 6.84e-16 1.0036 '`ftol` termination condition is satisfied.' yes 25/25 no_cycle_detected
+1 0.16953 6.49e-16 0.99095 '`ftol` termination condition is satisfied.' yes 25/25 not_converged
+10 0.16953 3.78e-16 0.99224 '`ftol` termination condition is satisfied.' yes 25/25 no_cycle_detected
+11 0.16953 7.95e-16 0.98584 '`ftol` termination condition is satisfied.' yes 25/25 not_converged
+2 0.169536 5.93e-16 1.00606 '`ftol` termination condition is satisfied.' yes 25/25 no_cycle_detected
+3 0.169531 3.48e-16 0.98193 '`ftol` termination condition is satisfied.' yes 25/25 not_converged
+4 0.16953 2.09e-16 0.99202 '`ftol` termination condition is satisfied.' yes 25/25 no_cycle_detected
+5 0.16953 5.14e-16 0.99129 '`ftol` termination condition is satisfied.' yes 25/25 not_converged
+6 0.16953 3.47e-16 0.99268 '`ftol` termination condition is satisfied.' yes 25/25 no_cycle_detected
+7 0.169531 6.56e-16 1.00035 '`ftol` termination condition is satisfied.' yes 25/25 not_converged
+8 0.169531 9.37e-16 0.9936 '`ftol` termination condition is satisfied.' yes 25/25 not_converged
+9 0.16953 2.19e-16 0.98558 '`ftol` termination condition is satisfied.' yes 25/25 not_converged

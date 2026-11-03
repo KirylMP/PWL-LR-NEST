@@ -1,0 +1,26 @@
+gamma 0.013316 cycle
+gamma 0.015581 cycle
+gamma 0.019723 cycle
+gamma 0.024966 cycle
+gamma 0.029215 cycle
+gamma 0.03698 cycle
+gamma 0.04681 cycle
+gamma 0.054776 cycle
+gamma 0.069337 cycle
+gamma 0.087768 cycle
+gamma 0.102703 cycle
+gamma 0.130004 cycle
+gamma 0.164561 cycle
+gamma 0.192564 cycle
+gamma 0.243752 cycle
+gamma 0.308546 cycle
+gamma 0.361051 cycle
+gamma 0.457026 cycle
+gamma 0.578513 cycle
+gamma 0.676957 cycle
+gamma 0.856907 cycle
+gamma 1.08469 cycle
+gamma 1.269269 cycle
+gamma 1.606668 cycle
+gamma 2.033753 cycle
+saved runs/am-search-01/7/validation.json cycles 25 / 25 near-H1 not_converged MAE {'Cmin': 0.01749368726337981, 'Cmax': 0.0073385162200295204, 'period': 0.13640219557692945}

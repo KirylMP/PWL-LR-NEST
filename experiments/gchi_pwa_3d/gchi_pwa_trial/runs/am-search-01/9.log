@@ -1,0 +1,9 @@
+calls 1 loss 46.11347 best 46.11347 time 0.1 closure 1.57627 foldres 2.36952 cmin 0.10811
+calls 51 loss 4.35326 best 4.35323 time 5.5 closure 0.52981 foldres -0.02981 cmin 0.14378
+calls 101 loss 0.26209 best 0.26201 time 10.9 closure 0.01794 foldres 0.01108 cmin 0.16551
+calls 151 loss 0.22005 best 0.22004 time 16.4 closure 0.00971 foldres 0.00674 cmin 0.16101
+calls 201 loss 0.20251 best 0.20251 time 21.8 closure 0.01026 foldres 0.01046 cmin 0.16175
+calls 251 loss 0.1786 best 0.17859 time 27.4 closure 0.0075 foldres -0.00139 cmin 0.16156
+calls 301 loss 0.17018 best 0.17015 time 32.8 closure 0.00829 foldres -0.00535 cmin 0.16136
+calls 351 loss 0.16953 best 0.16953 time 38.3 closure 0.00945 foldres -0.00481 cmin 0.16173
+FINISHED `ftol` termination condition is satisfied. calls 386 best 0.16953041851365402

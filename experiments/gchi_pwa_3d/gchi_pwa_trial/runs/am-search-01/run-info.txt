@@ -1,0 +1,5 @@
+run_name=am-search-01
+seed_count=12
+parallelism=4
+max_nfev=120
+command=bash run_jobs.sh am-search-01 12 4 120
